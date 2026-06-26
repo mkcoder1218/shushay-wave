@@ -29,14 +29,17 @@ export default function FeatureCard({ card }: FeatureCardProps) {
           </div>
         </div>
       ) : (
-        <div className="overflow-hidden">
-          <h3 className="text-lg font-bold text-[#1A5A45] md:px-4 md:text-xl lg:px-6 lg:text-2xl xl:px-4 xl:text-2xl 2xl:px-10 2xl:text-[32px]">
-            {card.title}
-          </h3>
-          <p className="text-sm text-[#242424] md:px-3 md:text-sm lg:px-5 lg:text-base xl:px-3 xl:text-base 2xl:px-8 2xl:text-[18px]">
-            {card.description}
-          </p>
-          <div className="mt-6 flex items-center justify-center overflow-hidden rounded-xl">
+        <div className="flex h-full flex-col justify-between overflow-hidden 2xl:h-[628px]">
+          <div>
+            <h3 className="text-lg font-bold text-[#1A5A45] md:px-4 md:text-xl lg:px-6 lg:text-2xl xl:px-4 xl:text-2xl 2xl:px-10 2xl:text-[32px]">
+              {card.title}
+            </h3>
+            <p className="text-[18px] text-[#242424] md:px-3 md:text-sm lg:px-5 lg:text-base xl:px-3 xl:text-base 2xl:px-8 2xl:text-[18px]">
+              {card.description}
+            </p>
+          </div>
+
+          <div className="flex items-end justify-center overflow-hidden rounded-xl">
             <img
               src={card.image}
               alt={card.alt}
