@@ -25,8 +25,9 @@ export default function Testimonials() {
         </h2>
       </div>
 
-      <div className="md:w-400 overflow-hidden relative flex items-center justify-center gap-4 px-4 mx-auto">
-        {/* Left card — peek */}
+      {/*  w-full on mobile, fixed on desktop */}
+      <div className="w-full md:w-400 overflow-hidden relative flex items-center justify-center gap-4 px-4 mx-auto">
+        {/* Left card — peek (desktop only, unchanged) */}
         <div className="hidden lg:block md:w-100 flex-shrink-0 rounded-3xl bg-[#1a1a1a] p-6 min-h-[280px] h-[449px] overflow-hidden">
           <p className="text-gray-300 text-sm md:text-[24px] leading-relaxed">
             {TESTIMONIALS[getIndex(-1)].quote}
@@ -48,11 +49,12 @@ export default function Testimonials() {
           </div>
         </div>
 
-        {/* Center card — active */}
-        <div className="relative w-200 flex-shrink-0">
+        {/* Center card —  full width on mobile */}
+        <div className="relative w-full lg:w-200 flex-shrink-0">
+          {/*  button closer to edge on mobile */}
           <button
             onClick={prev}
-            className="cursor-pointer absolute left-16 top-1/2 -translate-y-1/2 -translate-x-1/2 z-10 w-10 h-10 rounded-full bg-white text-black flex items-center justify-center shadow-lg hover:bg-gray-100 transition-colors"
+            className="cursor-pointer absolute left-4 lg:left-16 top-1/2 -translate-y-1/2 -translate-x-1/2 z-10 w-10 h-10 rounded-full bg-white text-black flex items-center justify-center shadow-lg hover:bg-gray-100 transition-colors"
             aria-label="Previous testimonial"
           >
             <svg
@@ -70,7 +72,8 @@ export default function Testimonials() {
             </svg>
           </button>
 
-          <div className="rounded-3xl bg-[#85E0404D] p-8 md:p-10 min-h-[280px] h-[449px] flex flex-col justify-between shadow-xl">
+          {/*  h-auto on mobile so content isn't clipped */}
+          <div className="rounded-3xl bg-[#85E0404D] p-8 md:p-10 min-h-[280px] h-auto md:h-[449px] flex flex-col justify-between shadow-xl">
             <p className="text-[#1a2e1a] text-sm md:text-[24px] leading-relaxed text-center">
               {TESTIMONIALS[active].quote}
             </p>
@@ -91,9 +94,10 @@ export default function Testimonials() {
             </div>
           </div>
 
+          {/*  button closer to edge on mobile */}
           <button
             onClick={next}
-            className="cursor-pointer absolute right-16 top-1/2 -translate-y-1/2 translate-x-1/2 z-10 w-10 h-10 rounded-full bg-white text-black flex items-center justify-center shadow-lg hover:bg-gray-100 transition-colors"
+            className="cursor-pointer absolute right-4 lg:right-16 top-1/2 -translate-y-1/2 translate-x-1/2 z-10 w-10 h-10 rounded-full bg-white text-black flex items-center justify-center shadow-lg hover:bg-gray-100 transition-colors"
             aria-label="Next testimonial"
           >
             <svg
@@ -112,7 +116,7 @@ export default function Testimonials() {
           </button>
         </div>
 
-        {/* Right card — peek */}
+        {/* Right card — peek (desktop only, unchanged) */}
         <div className="hidden lg:block md:w-100 flex-shrink-0 rounded-3xl bg-gray-100 p-6 min-h-[280px] h-[449px] overflow-hidden">
           <p className="text-gray-700 text-sm text-[24px] leading-relaxed text-center">
             {TESTIMONIALS[getIndex(1)].quote}

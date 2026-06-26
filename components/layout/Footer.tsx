@@ -76,7 +76,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 pt-6 text-white text-[14px]">
+        <div className="md:mt-10 pt-6 text-white text-[14px]">
           © {new Date().getFullYear()} Wave Equb. All rights reserved.
         </div>
       </Container>

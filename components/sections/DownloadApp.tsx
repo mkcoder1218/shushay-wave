@@ -10,7 +10,7 @@ export default function DownloadApp() {
         style={{ backgroundImage: "url('/imgs/download-app-main-bg.png')" }}
       />
 
-      {/* Phone image — hidden on mobile, original position on desktop */}
+      {/* Phone image — desktop only, absolute positioned */}
       <div className="hidden md:flex absolute -top-1 md:right-120 z-10 items-end justify-end pr-4 md:pr-8">
         <img
           src="/imgs/phone-on-hand.png"
@@ -38,6 +38,15 @@ export default function DownloadApp() {
                 savings.
               </p>
               <AppStoreButtons className="mt-2" />
+            </div>
+
+            {/* Phone image — mobile only, inline below text */}
+            <div className="md:hidden flex justify-center w-full pb-0">
+              <img
+                src="/imgs/phone-on-hand.png"
+                alt="Hand holding phone with QR code"
+                className="h-72"
+              />
             </div>
           </div>
         </div>
