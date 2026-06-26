@@ -9,13 +9,14 @@ export default function Features() {
     >
       {/* Green top zone */}
       <div
-        className="absolute top-0 left-4 right-4 md:left-20 md:right-20 h-full md:h-[55%] bg-cover rounded-2xl"
+        className="absolute top-0 left-4 right-4 md:left-20 md:right-20 hidden md:block h-full md:h-[55%] bg-cover rounded-2xl"
         style={{ backgroundImage: "url('/imgs/feattures-bg.png')" }}
       />
-
+      <div className="absolute bg-[#1A5A45] top-0 left-4 right-4 md:left-20 md:right-20 md:hidden h-full md:h-[55%] bg-cover rounded-2xl" />
       <Container className="relative py-12 md:py-20">
-        <h2 className="text-center text-2xl md:text-[48px] font-bold text-transparent mb-10 md:mb-16">
-          Digital Equb, Zero Cash Risk
+        <h2 className="text-center text-2xl md:text-[48px] font-bold text-[#85E040] md:text-transparent mb-10 md:mb-16">
+          Digital Equb, <br className="md:hidden" />
+          Zero Cash Risk
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-end text-center px-2 md:px-6">

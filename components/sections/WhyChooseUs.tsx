@@ -53,7 +53,7 @@ export default function WhyChooseUs() {
 
         {/* Bottom card */}
         <div className="relative rounded-3xl overflow-hidden w-full min-h-[260px] flex flex-col md:flex-row items-center border border-black/10">
-          <div className="w-full md:w-1/2 p-6 md:p-8 flex flex-col justify-center gap-8 md:gap-16">
+          <div className="w-full md:w-1/2 p-6 md:p-8 flex flex-col justify-center gap-8 md:gap-20">
             <div className="flex items-center gap-5 text-[#85E040]">
               <img
                 src="/icons/dollar-sign.svg"
