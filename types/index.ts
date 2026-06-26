@@ -25,3 +25,9 @@ export interface FeatureCard {
   alt: string;
   center: boolean;
 }
+
+export interface Partner {
+  id: number;
+  name: string;
+  logo: string;
+}

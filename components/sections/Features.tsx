@@ -1,66 +1,30 @@
 import Container from "@/components/ui/Container";
+import SectionHeading from "@/components/ui/SectionHeading";
 import { FEATURE_CARDS } from "@/lib/constants/features";
+import FeatureCard from "./FeatureCard";
 
 export default function Features() {
   return (
     <section
       id="features"
-      className="relative overflow-hidden bg-[#f8ffe4] px-4 md:px-20"
+      className="relative overflow-hidden bg-[#f8ffe4] px-4 md:px-6 lg:px-10 xl:px-12 2xl:px-20"
     >
-      {/* Green top zone */}
       <div
-        className="absolute top-0 left-4 right-4 md:left-20 md:right-20 hidden md:block h-full md:h-[55%] bg-cover rounded-2xl"
+        className="absolute left-4 right-4 top-0 hidden h-full rounded-2xl bg-cover md:left-6 md:right-6 md:block md:h-[55%] lg:left-10 lg:right-10 xl:left-12 xl:right-12 2xl:left-20 2xl:right-20"
         style={{ backgroundImage: "url('/imgs/feattures-bg.png')" }}
       />
-      <div className="absolute bg-[#1A5A45] top-0 left-4 right-4 md:left-20 md:right-20 md:hidden h-full md:h-[55%] bg-cover rounded-2xl" />
-      <Container className="relative py-12 md:py-20">
-        <h2 className="text-center text-2xl md:text-[48px] font-bold text-[#85E040] md:text-transparent mb-10 md:mb-16">
-          Digital Equb, <br className="md:hidden" />
-          Zero Cash Risk
-        </h2>
+      <div className="absolute left-4 right-4 top-0 h-full rounded-2xl bg-[#1A5A45] bg-cover md:hidden md:h-[55%] md:left-6 md:right-6 lg:left-10 lg:right-10 xl:left-12 xl:right-12 2xl:left-20 2xl:right-20" />
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-end text-center px-2 md:px-6">
+      <Container className="relative py-12 md:py-14 lg:py-16 xl:py-16 2xl:py-20">
+        <SectionHeading
+          title="Digital Equb, Zero Cash Risk"
+          titleClassName="text-center text-2xl text-[#85E040] md:text-transparent md:text-3xl lg:text-4xl xl:text-4xl 2xl:text-[48px]"
+          className="mb-10 md:mb-10 lg:mb-12 xl:mb-12 2xl:mb-16"
+        />
+
+        <div className="grid grid-cols-1 items-end gap-6 px-2 text-center md:grid-cols-2 md:px-4 lg:grid-cols-2 lg:px-5 xl:grid-cols-3 xl:px-4 2xl:px-6">
           {FEATURE_CARDS.map((card) => (
-            <div
-              key={card.title}
-              className={`bg-white rounded-2xl w-full md:max-h-[628px] md:max-w-[473px] p-6 shadow-xl flex flex-col gap-4 ${card.center ? "md:-mt-8" : ""}`}
-            >
-              {card.center ? (
-                <div className="overflow-hidden min-h-100 md:min-h-[628px] flex items-end pb-8 md:pb-16">
-                  <div className="absolute top-152 left-17  md:top-42 md:left-185 overflow-hidden rounded-xl flex items-center justify-center">
-                    <img
-                      src={card.image}
-                      alt={card.alt}
-                      className="w-full max-w-[200px] md:max-w-none h-auto"
-                    />
-                  </div>
-                  <div>
-                    <h3 className="text-[#1A5A45] text-lg md:text-[32px] font-bold">
-                      {card.title}
-                    </h3>
-                    <p className="text-[#242424] text-sm md:text-[18px] md:px-5">
-                      {card.description}
-                    </p>
-                  </div>
-                </div>
-              ) : (
-                <div className="overflow-hidden">
-                  <h3 className="text-[#1A5A45] text-lg md:text-[32px] font-bold md:px-10">
-                    {card.title}
-                  </h3>
-                  <p className="text-[#242424] text-sm md:text-[18px] md:px-8">
-                    {card.description}
-                  </p>
-                  <div className="overflow-hidden rounded-xl flex items-center justify-center mt-4 md:mt-0">
-                    <img
-                      src={card.image}
-                      alt={card.alt}
-                      className="w-full max-w-[200px] md:max-w-none h-auto"
-                    />
-                  </div>
-                </div>
-              )}
-            </div>
+            <FeatureCard key={card.title} card={card} />
           ))}
         </div>
       </Container>

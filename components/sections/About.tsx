@@ -1,61 +1,47 @@
-import Container from "@/components/ui/Container";
+import Section from "@/components/ui/Section";
+
+const aboutParagraphs = [
+  "Wave Equb modernizes the traditional equb system, making it easier, clearer, and faster to use. Users can save money together in a structured and secure manner using mobile technology—without confusion or risk. Every contribution and payout is recorded, visible, and easy to track.",
+  "With Wave Equb, users can effortlessly create or join Equb groups, set contribution amounts and schedules, and manage everything directly from their mobile device. The platform offers a fully cashless environment where all transactions are processed digitally, ensuring safety, accuracy, and convenience. Automated reminders and smart payment systems help users stay consistent with their contributions, minimizing delays or conflicts within the group.",
+  "Beyond just digitizing Equb, Wave Equb enhances the entire saving experience by merging technology with community trust. It empowers individuals to build better financial habits, supports groups in achieving their goals more efficiently, and opens access to structured savings for those who may lack traditional financial services.",
+  "By bridging tradition and technology, Wave Equb provides a smarter, safer, and more reliable way to save — anytime, anywhere.",
+];
 
 export default function About() {
   return (
-    <section id="about" className="bg-[#f8ffe4] py-16 md:py-24">
-      <Container>
-        <div className="grid md:grid-cols-2 gap-6 lg:gap-16 items-center">
-          <div className="flex justify-center md:justify-start order-2 md:order-1 ">
-            <img
-              src="/imgs/woman.png"
-              alt="Woman using Wave Equb app"
-              className="w-full max-w-sm md:max-w-full h-auto object-contain"
-            />
-          </div>
+    <Section
+      id="about"
+      className="bg-[#f8ffe4] py-16 md:py-16 lg:py-20 xl:py-24"
+    >
+      <div className="grid items-center gap-6 md:grid-cols-2 lg:gap-12 xl:gap-16">
+        <div className="order-2 flex justify-center md:order-1 md:justify-start">
+          <img
+            src="/imgs/woman.png"
+            alt="Woman using Wave Equb app"
+            className="h-auto w-full max-w-sm object-contain md:max-w-md lg:max-w-lg xl:max-w-full"
+          />
+        </div>
 
-          <div className="space-y-3 pr-10 order-1 md:order-2 ">
-            <p className="text-black text-[18px] font-bold md:pl-30">
-              About the App
-            </p>
-            <h2 className="text-3xl md:text-[96px] md:pl-30 font-bold text-[#1A5A45] leading-tight">
-              Wave Equb
-            </h2>
+        <div className="order-1 space-y-3 pr-10 md:order-2 md:pr-4 lg:pr-8 xl:pr-10">
+          <p className="text-[18px] font-bold text-black md:pl-0 lg:pl-16 xl:pl-16 2xl:pl-30">
+            About the App
+          </p>
+          <h2 className="text-3xl font-bold leading-tight text-[#1A5A45] md:pl-0 md:text-5xl lg:pl-16 lg:text-7xl xl:pl-16 xl:text-7xl 2xl:pl-30 2xl:text-[96px]">
+            Wave Equb
+          </h2>
 
-            <p className="text-[#242424] text-base md:text-[24px] md:mt-20 leading-relaxed">
-              Wave Equb modernizes the traditional equb system, making it
-              easier, clearer, and faster to use. Users can save money together
-              in a structured and secure manner using mobile technology—without
-              confusion or risk. Every contribution and payout is recorded,
-              visible, and easy to track.
-            </p>
-
-            <p className="text-[#242424] text-base md:text-[24px] leading-relaxed">
-              With Wave Equb, users can effortlessly create or join Equb groups,
-              set contribution amounts and schedules, and manage everything
-              directly from their mobile device. The platform offers a fully
-              cashless environment where all transactions are processed
-              digitally, ensuring safety, accuracy, and convenience. Automated
-              reminders and smart payment systems help users stay consistent
-              with their contributions, minimizing delays or conflicts within
-              the group.
-            </p>
-
-            <p className="text-[#242424] text-base md:text-[24px] leading-relaxed">
-              Beyond just digitizing Equb, Wave Equb enhances the entire saving
-              experience by merging technology with community trust. It empowers
-              individuals to build better financial habits, supports groups in
-              achieving their goals more efficiently, and opens access to
-              structured savings for those who may lack traditional financial
-              services.
-            </p>
-
-            <p className="text-[#242424] text-base md:text-[24px] leading-relaxed">
-              By bridging tradition and technology, Wave Equb provides a
-              smarter, safer, and more reliable way to save — anytime, anywhere.
-            </p>
+          <div className="space-y-6">
+            {aboutParagraphs.map((paragraph) => (
+              <p
+                key={paragraph}
+                className="text-base leading-relaxed text-[#242424] md:text-base lg:text-xl xl:text-xl 2xl:text-[24px]"
+              >
+                {paragraph}
+              </p>
+            ))}
           </div>
         </div>
-      </Container>
-    </section>
+      </div>
+    </Section>
   );
 }

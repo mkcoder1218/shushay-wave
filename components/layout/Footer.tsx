@@ -5,13 +5,13 @@ import { FOOTER_MENU_LINKS, FOOTER_SOCIAL_LINKS } from "@/lib/constants/footer";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#1A1A19] text-white py-10 md:py-12 px-4 md:px-10">
+    <footer className="bg-[#1A1A19] text-white py-10 md:py-10 lg:py-11 xl:py-12 px-4 md:px-6 lg:px-8 xl:px-10">
       <Container>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8 lg:gap-12 xl:gap-16">
           {/* Brand column */}
           <div className="space-y-5">
             <img src="/icons/logo-2.svg" alt="Wave" />
-            <p className="text-white text-sm md:text-[18px] leading-relaxed md:max-w-100">
+            <p className="text-white text-sm md:text-sm lg:text-base xl:text-[18px] leading-relaxed md:max-w-full lg:max-w-80 xl:max-w-100">
               Discover a smarter way to save together. Scan to join your Equb,
               manage contributions, and enjoy secure, transparent group savings.
             </p>
@@ -76,7 +76,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="md:mt-10 pt-6 text-white text-[14px]">
+        <div className="md:mt-8 lg:mt-9 xl:mt-10 pt-6 text-white text-[14px]">
           © {new Date().getFullYear()} Wave Equb. All rights reserved.
         </div>
       </Container>

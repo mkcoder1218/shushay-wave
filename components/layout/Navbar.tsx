@@ -29,7 +29,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`sticky top-0 z-50 md:px-25 transition-colors duration-300 ${
+      className={`sticky top-0 z-50 md:px-8 lg:px-16 xl:px-25 transition-colors duration-300 ${
         mobileMenuOpen
           ? "bg-white shadow-sm"
           : scrolled
@@ -38,22 +38,26 @@ export default function Navbar() {
       }`}
     >
       <Container className="px-4 sm:px-6 lg:px-12">
-        <div className="relative flex items-center justify-between h-16 md:h-[136px]">
+        <div className="flex items-center justify-between gap-3 md:gap-4 h-16 md:h-20 lg:h-28 xl:h-[136px]">
           {/* Logo */}
-          <Link href="/" className="flex items-center shrink-0 z-10">
-            <img src="/icons/1 1.svg" alt="Logo" className="h-10 md:h-full" />
+          <Link href="/" className="flex items-center shrink-0">
+            <img
+              src="/icons/logo-1.svg"
+              alt="Logo"
+              className="h-10 md:h-12 lg:h-16 xl:h-full"
+            />
           </Link>
 
-          {/* Desktop Navigation — centered */}
+          {/* Desktop Navigation — centered in available space */}
           <div
-            className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-8 lg:gap-10"
+            className="hidden md:flex flex-1 justify-center items-center gap-3 md:gap-4 lg:gap-6 xl:gap-10 min-w-0 px-2"
             style={{ fontFamily: "var(--font-be-vietnam-pro)" }}
           >
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-[#1A5A45] font-bold text-[20px] hover:opacity-80 transition-opacity whitespace-nowrap"
+                className="text-[#1A5A45] font-bold text-sm lg:text-base xl:text-[20px] hover:opacity-80 transition-opacity whitespace-nowrap"
               >
                 {link.label}
               </Link>
@@ -61,8 +65,12 @@ export default function Navbar() {
           </div>
 
           {/* Desktop CTA */}
-          <div className="hidden md:block shrink-0 z-10">
-            <Button variant="primary" size="md" className="rounded-full px-6">
+          <div className="hidden md:block shrink-0">
+            <Button
+              variant="primary"
+              size="sm"
+              className="rounded-full xl:px-6 xl:py-4 xl:text-[20px]"
+            >
               Download App
             </Button>
           </div>
@@ -70,7 +78,7 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 rounded-lg z-10 cursor-pointer"
+            className="md:hidden p-2 rounded-lg cursor-pointer"
             aria-label="Toggle menu"
           >
             <img

@@ -1,41 +1,47 @@
+import Button from "@/components/ui/Button";
+import Section from "@/components/ui/Section";
+
 export default function Hero() {
   return (
-    <section className="relative">
-      <div className="relative z-10 mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1
-          className="pt-10 md:pt-20 mb-4 text-3xl sm:text-4xl md:text-[64px] font-bold text-[#1A5A45] leading-tight"
+    <Section
+      id="hero"
+      className="relative"
+      containerClassName="relative z-10 mx-auto px-4 text-center sm:px-6 lg:px-8"
+    >
+      <h1
+        className="mb-4 pt-10 text-3xl font-bold leading-tight text-[#1A5A45] sm:text-4xl md:pt-12 md:text-4xl lg:pt-16 lg:text-5xl xl:pt-20 xl:text-[64px]"
+        style={{ fontFamily: "var(--font-be-vietnam-pro)" }}
+      >
+        Transforming Equb For The Digital Age
+      </h1>
+
+      <p className="mx-auto mb-8 max-w-2xl text-sm font-medium text-[#242424] sm:text-base md:text-base lg:text-lg xl:text-[18px]">
+        Save Together, Access Funds Easily, And Manage Your Equb Anytime,
+        Anywhere With Wave.
+      </p>
+
+      <div className="mb-6 flex justify-center md:mb-6 lg:mb-7 xl:mb-8">
+        <Button
+          className="h-12 gap-2 rounded-xl pl-5 pr-2 text-base text-white transition-colors hover:bg-[#154a38] md:h-12 lg:h-14 lg:text-lg xl:h-[62px] xl:text-[20px]"
           style={{ fontFamily: "var(--font-be-vietnam-pro)" }}
+          type="button"
         >
-          Transforming Equb For The Digital Age
-        </h1>
-
-        <p className="mx-auto mb-8 max-w-2xl text-[#242424] font-medium text-sm sm:text-base md:text-[18px]">
-          Save Together, Access Funds Easily, And Manage Your Equb Anytime,
-          Anywhere With Wave.
-        </p>
-
-        <div className="flex justify-center mb-6 md:mb-8">
-          <button
-            className="flex items-center gap-2 cursor-pointer h-12 md:h-[62px] pl-5 pr-2 rounded-xl bg-[#1A5A45] font-semibold text-white text-base md:text-[20px] hover:bg-[#154a38] transition-colors"
-            style={{ fontFamily: "var(--font-be-vietnam-pro)" }}
-          >
-            <span>Get the App</span>
-            <img
-              src="/icons/Arrow.svg"
-              alt=""
-              className="h-8 w-8 md:h-9 md:w-9"
-            />
-          </button>
-        </div>
-
-        <div className="flex justify-center items-end">
+          <span>Get the App</span>
           <img
-            src="/imgs/hero-image.png"
-            alt="Wave app on mobile devices"
-            className="w-full max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-full h-auto object-contain"
+            src="/icons/Arrow.svg"
+            alt=""
+            className="h-8 w-8 lg:h-9 lg:w-9 xl:h-9 xl:w-9"
           />
-        </div>
+        </Button>
       </div>
-    </section>
+
+      <div className="flex items-end justify-center">
+        <img
+          src="/imgs/hero-image.png"
+          alt="Wave app on mobile devices"
+          className="h-auto w-full max-w-md bg-contain md:max-w-xl lg:max-w-2xl xl:max-w-full"
+        />
+      </div>
+    </Section>
   );
 }
