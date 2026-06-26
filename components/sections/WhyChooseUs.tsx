@@ -45,7 +45,7 @@ export default function WhyChooseUs() {
               <img
                 src="/imgs/phone 2.png"
                 alt="Equb details screen"
-                className="md:max-w-none h-auto object-contain object-bottom"
+                className="w-[250px] md:max-w-none object-bottom"
               />
             </div>
           </div>
@@ -55,10 +55,26 @@ export default function WhyChooseUs() {
         <div className="relative rounded-3xl overflow-hidden w-full min-h-[260px] flex flex-col md:flex-row items-center border border-black/10">
           <div className="w-full md:w-1/2 p-6 md:p-8 flex flex-col justify-center gap-8 md:gap-16">
             <div className="flex items-center gap-5 text-[#85E040]">
-              <img src="/icons/dollar-sign.svg" alt="" />
-              <img src="/icons/grid.svg" alt="" />
-              <img src="/icons/divide.svg" alt="" />
-              <img src="/icons/trending-up.svg" alt="" />
+              <img
+                src="/icons/dollar-sign.svg"
+                alt=""
+                className="w-8 h-8 md:w-auto md:h-auto"
+              />
+              <img
+                src="/icons/grid.svg"
+                alt=""
+                className="w-8 h-8 md:w-auto md:h-auto"
+              />
+              <img
+                src="/icons/divide.svg"
+                alt=""
+                className="w-8 h-8 md:w-auto md:h-auto"
+              />
+              <img
+                src="/icons/trending-up.svg"
+                alt=""
+                className="w-8 h-8 md:w-auto md:h-auto"
+              />
             </div>
             <div>
               <h3 className="text-[#1A5A45] text-2xl md:text-[48px] font-bold mb-2">

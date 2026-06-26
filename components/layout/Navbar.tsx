@@ -15,11 +15,26 @@ export default function Navbar() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileMenuOpen]);
 
   return (
     <nav
       className={`sticky top-0 z-50 md:px-25 transition-colors duration-300 ${
-        scrolled ? "bg-white/90 backdrop-blur-sm shadow-sm" : "bg-transparent"
+        mobileMenuOpen
+          ? "bg-white shadow-sm"
+          : scrolled
+            ? "bg-white/90 backdrop-blur-sm shadow-sm"
+            : "bg-transparent"
       }`}
     >
       <Container className="px-4 sm:px-6 lg:px-12">

@@ -4,8 +4,8 @@ export default function About() {
   return (
     <section id="about" className="bg-[#f8ffe4] py-16 md:py-24">
       <Container>
-        <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
-          <div className="flex justify-center md:justify-start">
+        <div className="grid md:grid-cols-2 gap-6 lg:gap-16 items-center">
+          <div className="flex justify-center md:justify-start order-2 md:order-1 ">
             <img
               src="/imgs/woman.png"
               alt="Woman using Wave Equb app"
@@ -13,7 +13,7 @@ export default function About() {
             />
           </div>
 
-          <div className="space-y-3 pr-10">
+          <div className="space-y-3 pr-10 order-1 md:order-2 ">
             <p className="text-black text-[18px] font-bold md:pl-30">
               About the App
             </p>
