@@ -1,23 +1,55 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Be_Vietnam_Pro } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const geist = localFont({
+  src: [
+    {
+      path: "../public/fonts/Geist-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/Geist-Medium.ttf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/Geist-SemiBold.ttf",
+      weight: "600",
+      style: "normal",
+    },
+    { path: "../public/fonts/Geist-Bold.ttf", weight: "700", style: "normal" },
+  ],
+  variable: "--font-geist",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-const beVietnamPro = Be_Vietnam_Pro({
+const beVietnamPro = localFont({
+  src: [
+    {
+      path: "../public/fonts/BeVietnamPro-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/BeVietnamPro-Medium.ttf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/BeVietnamPro-SemiBold.ttf",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/BeVietnamPro-Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
   variable: "--font-be-vietnam-pro",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -34,9 +66,17 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${beVietnamPro.variable} h-full antialiased`}
+      className={`${geist.variable} ${beVietnamPro.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body
+        className="min-h-full flex flex-col relative"
+        style={{ fontFamily: "var(--font-geist), sans-serif" }}
+      >
+        {/* Background covers exactly 1000px from the top (navbar + hero) */}
+        <div
+          className="absolute top-0 left-0 right-0 h-[1000px] bg-center bg-cover bg-no-repeat pointer-events-none -z-10"
+          style={{ backgroundImage: "url('/imgs/hero-bg.png')" }}
+        />
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />

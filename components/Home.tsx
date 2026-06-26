@@ -4,6 +4,9 @@ import HowItWorks from '@/components/sections/HowItWorks';
 import Features from '@/components/sections/Features';
 import About from '@/components/sections/About';
 import WhyChooseUs from '@/components/sections/WhyChooseUs';
+import Testimonials from '@/components/sections/Testimonials';
+import DownloadApp from '@/components/sections/DownloadApp';
+import Contact from '@/components/sections/Contact';
 
 export default function Home() {
   return (
@@ -14,6 +17,9 @@ export default function Home() {
       <Features />
       <About />
       <WhyChooseUs />
+      <Testimonials />
+      <DownloadApp />
+      <Contact />
     </>
   );
 }
