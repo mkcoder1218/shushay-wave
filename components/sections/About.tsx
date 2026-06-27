@@ -9,10 +9,7 @@ const aboutParagraphs = [
 
 export default function About() {
   return (
-    <Section
-      id="about"
-      className="bg-[#f8ffe4] py-16 md:py-16 lg:py-20 xl:py-24"
-    >
+    <Section id="about" className="bg-bg-section py-16 md:py-16 lg:py-20 xl:py-24">
       <div className="grid items-center gap-6 md:grid-cols-2 lg:gap-12 xl:gap-16">
         <div className="order-2 flex justify-center md:order-1 md:justify-start">
           <img
@@ -23,10 +20,16 @@ export default function About() {
         </div>
 
         <div className="order-1 space-y-3 pr-10 md:order-2 md:pr-4 lg:pr-8 xl:pr-10">
-          <p className="text-[18px] font-bold text-black md:pl-0 lg:pl-16 xl:pl-16 2xl:pl-30">
+          <p
+            className="text-[18px] font-bold text-black md:pl-0 lg:pl-16 xl:pl-16 2xl:pl-30"
+            style={{ fontFamily: "var(--font-heading)" }}
+          >
             About the App
           </p>
-          <h2 className="text-3xl font-bold leading-tight text-[#1A5A45] md:pl-0 md:text-5xl lg:pl-16 lg:text-7xl xl:pl-16 xl:text-7xl 2xl:pl-30 2xl:text-[96px]">
+          <h2
+            className="text-3xl font-bold leading-tight text-green-primary md:pl-0 md:text-5xl lg:pl-16 lg:text-7xl xl:pl-16 xl:text-7xl 2xl:pl-30 2xl:text-[96px]"
+            style={{ fontFamily: "var(--font-heading)" }}
+          >
             Wave Equb
           </h2>
 
@@ -34,7 +37,7 @@ export default function About() {
             {aboutParagraphs.map((paragraph) => (
               <p
                 key={paragraph}
-                className="text-base leading-relaxed text-[#242424] md:text-base lg:text-xl xl:text-xl 2xl:text-[24px]"
+                className="text-base leading-relaxed text-text-body md:text-base lg:text-xl xl:text-xl 2xl:text-[24px]"
               >
                 {paragraph}
               </p>

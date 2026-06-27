@@ -7,7 +7,7 @@ export default function Features() {
   return (
     <section
       id="features"
-      className="relative overflow-hidden bg-[#f8ffe4] px-4 md:px-6 lg:px-10 xl:px-12 2xl:px-20"
+      className="relative overflow-hidden bg-bg-section px-4 md:px-6 lg:px-10 xl:px-12 2xl:px-20"
     >
       <div
         className="absolute left-4 right-4 top-0 hidden h-full rounded-2xl bg-cover md:left-6 md:right-6 md:block md:h-[55%] lg:left-10 lg:right-10 xl:left-12 xl:right-12 2xl:left-20 2xl:right-20"

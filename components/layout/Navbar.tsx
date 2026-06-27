@@ -15,16 +15,10 @@ export default function Navbar() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-  useEffect(() => {
-    if (mobileMenuOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
 
-    return () => {
-      document.body.style.overflow = "";
-    };
+  useEffect(() => {
+    document.body.style.overflow = mobileMenuOpen ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
   }, [mobileMenuOpen]);
 
   return (
@@ -39,43 +33,31 @@ export default function Navbar() {
     >
       <Container className="px-4 sm:px-6 lg:px-12">
         <div className="flex items-center justify-between gap-3 md:gap-4 h-16 md:h-20 lg:h-28 xl:h-[136px]">
-          {/* Logo */}
           <Link href="/" className="flex items-center shrink-0">
-            <img
-              src="/icons/logo-1.svg"
-              alt="Logo"
-              className="h-10 md:h-12 lg:h-16 xl:h-full"
-            />
+            <img src="/icons/logo-1.svg" alt="Logo" className="h-10 md:h-12 lg:h-16 xl:h-full" />
           </Link>
 
-          {/* Desktop Navigation — centered in available space */}
           <div
             className="hidden md:flex flex-1 justify-center items-center gap-3 md:gap-4 lg:gap-6 xl:gap-10 min-w-0 px-2"
-            style={{ fontFamily: "var(--font-be-vietnam-pro)" }}
+            style={{ fontFamily: "var(--font-heading)" }}
           >
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-[#1A5A45] font-bold text-sm lg:text-base xl:text-[20px] hover:opacity-80 transition-opacity whitespace-nowrap"
+                className="text-green-primary font-bold text-sm lg:text-base xl:text-[20px] hover:opacity-80 transition-opacity whitespace-nowrap"
               >
                 {link.label}
               </Link>
             ))}
           </div>
 
-          {/* Desktop CTA */}
           <div className="hidden md:block shrink-0">
-            <Button
-              variant="primary"
-              size="sm"
-              className="rounded-full xl:px-6 xl:py-4 xl:text-[20px]"
-            >
+            <Button variant="primary" size="sm" className="rounded-full xl:px-6 xl:py-4 xl:text-[20px]">
               Download App
             </Button>
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="md:hidden p-2 rounded-lg cursor-pointer"
@@ -89,7 +71,6 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* Mobile full-screen menu */}
         {mobileMenuOpen && (
           <div className="md:hidden fixed inset-0 top-16 bg-white z-40 flex flex-col py-6 px-6 space-y-2 border-t border-gray-200">
             {NAV_LINKS.map((link) => (

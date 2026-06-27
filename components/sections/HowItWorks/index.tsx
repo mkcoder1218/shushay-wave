@@ -6,7 +6,7 @@ export default function HowItWorks() {
   return (
     <section
       id="how-it-works"
-      className="relative bg-[#f8ffe4] overflow-hidden"
+      className="relative bg-bg-section overflow-hidden"
     >
       {/* World map watermark */}
       <div
@@ -27,10 +27,10 @@ export default function HowItWorks() {
 
           {/* Steps — first on mobile */}
           <div className="">
-            <p className="text-[#3C3C3C] text-[18px] font-medium mb-3">
+            <p className="text-text-muted text-[18px] font-medium mb-3">
               How It Works
             </p>
-            <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-[56px] font-bold text-[#1A5A45] mb-10">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-[56px] font-bold text-green-primary mb-10">
               Start saving with confidence in just a few simple steps.
             </h2>
 

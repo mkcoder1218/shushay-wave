@@ -12,12 +12,11 @@ export default function FeatureCard({ card }: FeatureCardProps) {
     >
       {card.center ? (
         <div className="flex min-h-100 flex-col justify-end lg:items-end overflow-hidden pb-8 md:min-h-[400px] md:pb-10 lg:min-h-[500px] lg:pb-12 xl:min-h-[480px] xl:pb-10 2xl:min-h-[628px] 2xl:flex-row 2xl:pb-16">
-          <div className="overflow-hidden rounded-xl absolute left-1/2 -translate-x-1/2 top-155 min-[400px]:top-148 2xl:left-196 2xl:top-50 2xl:translate-x-0 2xl:mx-0 2xl:mb-0 2xl:shrink-0">
-            {" "}
+          <div className="overflow-hidden rounded-xl absolute left-1/2 -translate-x-1/2 top-155 min-[400px]:top-148 xl:top-50 2xl:left-196 2xl:top-50 2xl:translate-x-0 2xl:mx-0 2xl:mb-0 2xl:shrink-0">
             <img
               src={card.image}
               alt={card.alt}
-              className="h-auto w-full max-w-[200px] md:max-w-[240px] lg:max-w-[280px] xl:max-w-[260px] 2xl:max-w-none"
+              className="h-auto max-w-[200px] bg-cover md:max-w-[220px] lg:max-w-[260px] xl:max-w-[240px] 2xl:max-w-none"
             />
           </div>
           <div className="relative z-10 w-full">

@@ -3,7 +3,7 @@ import AppStoreButtons from "@/components/ui/AppStoreButtons";
 
 export default function DownloadApp() {
   return (
-    <section className="bg-[#f8ffe4] py-12 md:py-14 lg:py-16 relative overflow-hidden">
+    <section className="bg-bg-section py-12 md:py-14 lg:py-16 relative overflow-hidden">
       {/* Outer background */}
       <div
         className="absolute inset-0 bg-center bg-cover bg-no-repeat pointer-events-none"
@@ -11,7 +11,7 @@ export default function DownloadApp() {
       />
 
       {/* Phone image — desktop only, absolute positioned on wide screens */}
-      <div className="hidden md:flex absolute -top-1 md:right-6 lg:right-10 xl:right-16 2xl:right-120 z-10 items-end justify-end pointer-events-none">
+      <div className="hidden md:flex absolute -top-1 md:right-6 lg:right-10 xl:right-25 xl:top-26 2xl:-top-1 2xl:right-120 z-10 items-end justify-end pointer-events-none">
         <img
           src="/imgs/phone-on-hand.png"
           alt="Hand holding phone with QR code"

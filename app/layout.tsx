@@ -60,19 +60,14 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html
       lang="en"
       className={`${geist.variable} ${beVietnamPro.variable} h-full antialiased`}
     >
-      <body
-        className="min-h-full flex flex-col relative"
-        style={{ fontFamily: "var(--font-geist), sans-serif" }}
-      >
-        {/* Background covers exactly 1000px from the top (navbar + hero) */}
+      <body className="min-h-full flex flex-col relative">
+        {/* Hero background — covers navbar + hero area */}
         <div
           className="absolute top-0 left-0 right-0 h-[1000px] bg-center bg-cover bg-no-repeat pointer-events-none -z-10"
           style={{ backgroundImage: "url('/imgs/hero-bg.png')" }}

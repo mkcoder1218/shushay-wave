@@ -18,7 +18,7 @@ export default function TestimonialCard({
   avatarClassName,
 }: TestimonialCardProps) {
   return (
-    <div className={className}>
+    <div className={`flex flex-col justify-between h-full ${className ?? ""}`}>
       <p className={quoteClassName}>{testimonial.quote}</p>
       <div className="mt-6 flex items-end justify-center gap-3">
         <img

@@ -30,36 +30,36 @@ export default function SectionHeading({
         className,
       )}
     >
-      {eyebrow ? (
+      {eyebrow && (
         <p
           className={clsx(
-            "mb-2 text-[18px] font-medium text-[#1A5A45]",
+            "mb-2 text-[18px] font-medium text-green-primary",
             eyebrowClassName,
           )}
         >
           {eyebrow}
         </p>
-      ) : null}
+      )}
 
       <h2
         className={clsx(
-          "text-[#1A5A45] text-3xl font-bold md:text-3xl lg:text-4xl xl:text-[56px] whitespace-pre-line",
+          "text-green-accent text-3xl font-bold md:text-3xl lg:text-4xl xl:text-[56px] whitespace-pre-line",
           titleClassName,
         )}
       >
         {title}
       </h2>
 
-      {description ? (
+      {description && (
         <p
           className={clsx(
-            "mx-auto mt-4 max-w-2xl text-base text-[#242424] md:text-lg",
+            "mx-auto mt-4 max-w-2xl text-base text-text-body md:text-lg",
             descriptionClassName,
           )}
         >
           {description}
         </p>
-      ) : null}
+      )}
     </div>
   );
 }

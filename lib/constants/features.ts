@@ -54,8 +54,8 @@ export const FEATURE_CARDS: FeatureCard[] = [
 ];
 
 export const NAV_LINKS: NavLink[] = [
-  { href: "#about", label: "About" },
-  { href: "#features", label: "Features" },
-  { href: "#how-it-works", label: "How It Works" },
-  { href: "#contact", label: "Contact" },
+  { href: "/#about", label: "About" },
+  { href: "/#features", label: "Features" },
+  { href: "/#how-it-works", label: "How It Works" },
+  { href: "/#contact", label: "Contact" },
 ];
