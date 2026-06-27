@@ -1,6 +1,7 @@
 import Container from "@/components/ui/Container";
 import StepItem from "./StepItem";
 import { HOW_IT_WORKS_STEPS } from "@/lib/constants/features";
+import clsx from "clsx";
 
 export default function HowItWorks() {
   return (
@@ -21,7 +22,10 @@ export default function HowItWorks() {
             <img
               src="/imgs/phone mockup 2.png"
               alt="Wave Equb app screens"
-              className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-full h-auto object-contain"
+              className={clsx(
+                "w-full max-w-xs sm:max-w-sm md:max-w-md",
+                "lg:max-w-lg xl:max-w-full h-auto object-contain",
+              )}
             />
           </div>
 

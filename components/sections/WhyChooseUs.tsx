@@ -1,6 +1,14 @@
 import Container from "@/components/ui/Container";
+import clsx from "clsx";
 
 export default function WhyChooseUs() {
+  const bottomIcons = [
+    "/icons/dollar-sign.svg",
+    "/icons/grid.svg",
+    "/icons/divide.svg",
+    "/icons/trending-up.svg",
+  ];
+
   return (
     <section
       id="why-choose-us"
@@ -13,9 +21,19 @@ export default function WhyChooseUs() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
           {/* Card 1 */}
-          <div className="relative rounded-3xl w-full 2xl:w-200 overflow-hidden bg-gradient-to-b from-green-accent to-green-primary min-h-[340px] flex flex-col">
+          <div
+            className={clsx(
+              "relative rounded-3xl w-full 2xl:w-200 overflow-hidden bg-gradient-to-b",
+              "from-green-accent to-green-primary min-h-[340px] flex flex-col",
+            )}
+          >
             <div className="p-6 md:p-6 lg:p-7 xl:p-8 text-center">
-              <p className="text-green-primary text-base md:text-lg lg:text-xl xl:text-[28px] uppercase tracking-widest mb-3">
+              <p
+                className={clsx(
+                  "text-green-primary text-base md:text-lg lg:text-xl",
+                  "xl:text-[28px] uppercase tracking-widest mb-3",
+                )}
+              >
                 You Only Need One App
               </p>
               <h3 className="text-white text-2xl md:text-2xl lg:text-4xl xl:text-[68px] font-bold leading-snug">
@@ -26,13 +44,21 @@ export default function WhyChooseUs() {
               <img
                 src="/imgs/man.png"
                 alt="Man using Wave Equb"
-                className="w-full max-w-[260px] md:max-w-[200px] lg:max-w-[240px] xl:max-w-[220px] 2xl:max-w-none h-auto object-contain object-bottom"
+                className={clsx(
+                  "w-full max-w-[260px] md:max-w-[200px] lg:max-w-[240px] xl:max-w-[220px]",
+                  "2xl:max-w-none h-auto object-contain object-bottom",
+                )}
               />
             </div>
           </div>
 
           {/* Card 2 */}
-          <div className="relative rounded-3xl w-full 2xl:w-200 overflow-hidden bg-gradient-to-b from-green-primary to-green-accent min-h-[340px] flex flex-col">
+          <div
+            className={clsx(
+              "relative rounded-3xl w-full 2xl:w-200 overflow-hidden  flex flex-col",
+              "bg-gradient-to-b from-green-primary to-green-accent min-h-[340px]",
+            )}
+          >
             <div className="p-6 md:p-6 lg:p-7 xl:p-8 text-center">
               <p className="text-green-accent text-base md:text-lg lg:text-xl xl:text-[28px] uppercase tracking-widest mb-3">
                 Simple Control
@@ -52,13 +78,27 @@ export default function WhyChooseUs() {
         </div>
 
         {/* Bottom card */}
-        <div className="relative rounded-3xl overflow-hidden w-full min-h-[260px] flex flex-col md:flex-row items-center border border-black/10">
-          <div className="w-full md:w-1/2 p-6 md:p-6 lg:p-7 xl:p-8 flex flex-col justify-center gap-8 md:gap-10 lg:gap-14 xl:gap-20">
+        <div
+          className={clsx(
+            "relative rounded-3xl overflow-hidden w-full min-h-[260px] flex flex-col",
+            "md:flex-row items-center border border-black/10",
+          )}
+        >
+          <div
+            className={clsx(
+              "w-full md:w-1/2 p-6 md:p-6 lg:p-7 xl:p-8 flex flex-col",
+              "justify-center gap-8 md:gap-10 lg:gap-14 xl:gap-20",
+            )}
+          >
             <div className="flex items-center gap-5 text-green-accent">
-              <img src="/icons/dollar-sign.svg" alt="" className="w-8 h-8 lg:w-9 lg:h-9 xl:w-auto xl:h-auto" />
-              <img src="/icons/grid.svg"        alt="" className="w-8 h-8 lg:w-9 lg:h-9 xl:w-auto xl:h-auto" />
-              <img src="/icons/divide.svg"      alt="" className="w-8 h-8 lg:w-9 lg:h-9 xl:w-auto xl:h-auto" />
-              <img src="/icons/trending-up.svg" alt="" className="w-8 h-8 lg:w-9 lg:h-9 xl:w-auto xl:h-auto" />
+              {bottomIcons.map((icon) => (
+                <img
+                  key={icon}
+                  src={icon}
+                  alt=""
+                  className="w-8 h-8 lg:w-9 lg:h-9 xl:w-auto xl:h-auto"
+                />
+              ))}
             </div>
             <div>
               <h3 className="text-green-primary text-2xl md:text-2xl lg:text-3xl xl:text-[48px] font-bold mb-2">
@@ -69,7 +109,12 @@ export default function WhyChooseUs() {
               </p>
             </div>
           </div>
-          <div className="absolute bottom-0 -right-10 w-[120%] md:relative md:bottom-auto md:right-auto md:w-1/2 flex justify-end pointer-events-none">
+          <div
+            className={clsx(
+              "absolute bottom-0 -right-10 w-[120%] md:relative md:bottom-auto",
+              "md:right-auto md:w-1/2 flex justify-end pointer-events-none",
+            )}
+          >
             <img
               src="/imgs/woman-2.png"
               alt="Woman using Wave Equb"

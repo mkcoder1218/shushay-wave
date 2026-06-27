@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
 import { NAV_LINKS } from "@/lib/constants/features";
+import clsx from "clsx";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -18,7 +19,9 @@ export default function Navbar() {
 
   useEffect(() => {
     document.body.style.overflow = mobileMenuOpen ? "hidden" : "";
-    return () => { document.body.style.overflow = ""; };
+    return () => {
+      document.body.style.overflow = "";
+    };
   }, [mobileMenuOpen]);
 
   return (
@@ -34,18 +37,27 @@ export default function Navbar() {
       <Container className="px-4 sm:px-6 lg:px-12">
         <div className="flex items-center justify-between gap-3 md:gap-4 h-16 md:h-20 lg:h-28 xl:h-[136px]">
           <Link href="/" className="flex items-center shrink-0">
-            <img src="/icons/logo-1.svg" alt="Logo" className="h-10 md:h-12 lg:h-16 xl:h-full" />
+            <img
+              src="/icons/logo-1.svg"
+              alt="Logo"
+              className="h-10 md:h-12 lg:h-16 xl:h-full"
+            />
           </Link>
 
           <div
-            className="hidden md:flex flex-1 justify-center items-center gap-3 md:gap-4 lg:gap-6 xl:gap-10 min-w-0 px-2"
-            style={{ fontFamily: "var(--font-heading)" }}
+            className={clsx(
+              "font-heading hidden md:flex flex-1 justify-center items-center gap-3",
+              "md:gap-4 lg:gap-6 xl:gap-10 min-w-0 px-2",
+            )}
           >
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-green-primary font-bold text-sm lg:text-base xl:text-[20px] hover:opacity-80 transition-opacity whitespace-nowrap"
+                className={clsx(
+                  "text-green-primary font-bold text-sm lg:text-base xl:text-[20px]",
+                  "hover:opacity-80 transition-opacity whitespace-nowrap",
+                )}
               >
                 {link.label}
               </Link>
@@ -53,7 +65,11 @@ export default function Navbar() {
           </div>
 
           <div className="hidden md:block shrink-0">
-            <Button variant="primary" size="sm" className="rounded-full xl:px-6 xl:py-4 xl:text-[20px]">
+            <Button
+              variant="primary"
+              size="sm"
+              className="rounded-full xl:px-6 xl:py-4 xl:text-[20px]"
+            >
               Download App
             </Button>
           </div>
@@ -72,7 +88,12 @@ export default function Navbar() {
         </div>
 
         {mobileMenuOpen && (
-          <div className="md:hidden fixed inset-0 top-16 bg-white z-40 flex flex-col py-6 px-6 space-y-2 border-t border-gray-200">
+          <div
+            className={clsx(
+              "md:hidden fixed inset-0 top-16 bg-white z-40 flex flex-col",
+              "py-6 px-6 space-y-2 border-t border-gray-200",
+            )}
+          >
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.href}

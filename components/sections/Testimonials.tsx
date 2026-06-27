@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { TESTIMONIALS } from "@/lib/constants/testimonials";
 import TestimonialCard from "./TestimonialCard";
+import clsx from "clsx";
 
 export default function Testimonials() {
   const [active, setActive] = useState(1);
@@ -29,9 +30,20 @@ export default function Testimonials() {
         </h2>
       </div>
 
-      <div className="relative mx-auto flex w-full items-center justify-center gap-3 overflow-hidden px-4 md:w-full lg:w-[90%] xl:w-full xl:max-w-[1200px] xl:gap-4 2xl:w-400 2xl:max-w-none 2xl:gap-4">
+      <div
+        className={clsx(
+          "relative mx-auto flex w-full items-center justify-center gap-3 overflow-hidden",
+          "px-4 md:w-full lg:w-[90%] xl:w-full xl:max-w-[1200px]",
+          "xl:gap-4 2xl:w-400 2xl:max-w-none 2xl:gap-4",
+        )}
+      >
         {/* Left side card */}
-        <div className="hidden h-[380px] flex-shrink-0 rounded-3xl bg-[#1a1a1a] p-6 lg:block lg:w-[min(100%,640px)] xl:w-[min(100%,680px)] 2xl:h-[449px] 2xl:w-200">
+        <div
+          className={clsx(
+            "hidden h-[380px] flex-shrink-0 rounded-3xl bg-[#1a1a1a] p-6 lg:block",
+            "lg:w-[min(100%,640px)] xl:w-[min(100%,680px)] 2xl:h-[449px] 2xl:w-200",
+          )}
+        >
           <TestimonialCard
             testimonial={TESTIMONIALS[getIndex(-1)]}
             className="h-full"
@@ -45,7 +57,11 @@ export default function Testimonials() {
         <div className="relative w-full flex-shrink-0 lg:w-[min(100%,640px)] xl:w-[min(100%,680px)] 2xl:w-200">
           <button
             onClick={prev}
-            className="absolute cursor-pointer left-4 top-1/2 z-10 flex h-10 w-10 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white text-black shadow-lg transition-colors hover:bg-gray-100 lg:left-16"
+            className={clsx(
+              "absolute cursor-pointer left-4 top-1/2 z-10 flex h-10 w-10 -translate-x-1/2 ",
+              "-translate-y-1/2 items-center justify-center rounded-full bg-white",
+              "text-black shadow-lg transition-colors hover:bg-gray-100 lg:left-16",
+            )}
             aria-label="Previous testimonial"
           >
             <svg
@@ -65,7 +81,10 @@ export default function Testimonials() {
 
           <div
             key={active}
-            className="flex min-h-[280px] h-auto flex-col justify-between rounded-3xl bg-green-accent/30 p-8 shadow-xl md:p-8 lg:h-[380px] lg:p-9 xl:p-9 2xl:h-[449px] 2xl:p-10"
+            className={clsx(
+              "flex min-h-[280px] h-auto flex-col justify-between rounded-3xl bg-green-accent/30",
+              "p-8 shadow-xl md:p-8 lg:h-[380px] lg:p-9 xl:p-9 2xl:h-[449px] 2xl:p-10",
+            )}
           >
             <TestimonialCard
               testimonial={TESTIMONIALS[active]}
@@ -78,7 +97,11 @@ export default function Testimonials() {
 
           <button
             onClick={next}
-            className="absolute cursor-pointer right-4 top-1/2 z-10 flex h-10 w-10 translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white text-black shadow-lg transition-colors hover:bg-gray-100 lg:right-16"
+            className={clsx(
+              "absolute cursor-pointer right-4 top-1/2 z-10 flex h-10 w-10 translate-x-1/2",
+              "-translate-y-1/2 items-center justify-center rounded-full bg-white",
+              "text-black shadow-lg transition-colors hover:bg-gray-100 lg:right-16",
+            )}
             aria-label="Next testimonial"
           >
             <svg
@@ -98,7 +121,12 @@ export default function Testimonials() {
         </div>
 
         {/* Right side card */}
-        <div className="hidden h-[380px] flex-shrink-0 rounded-3xl bg-gray-100 p-6 lg:block lg:w-[min(100%,640px)] xl:w-[min(100%,680px)] 2xl:h-[449px] 2xl:w-200">
+        <div
+          className={clsx(
+            "hidden h-[380px] flex-shrink-0 rounded-3xl bg-gray-100 p-6",
+            "lg:block lg:w-[min(100%,640px)] xl:w-[min(100%,680px)] 2xl:h-[449px] 2xl:w-200",
+          )}
+        >
           <TestimonialCard
             testimonial={TESTIMONIALS[getIndex(1)]}
             className="h-full"

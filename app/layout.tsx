@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import clsx from "clsx";
 
 const geist = localFont({
   src: [
@@ -69,7 +70,10 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col relative">
         {/* Hero background — covers navbar + hero area */}
         <div
-          className="absolute top-0 left-0 right-0 h-[1000px] bg-center bg-cover bg-no-repeat pointer-events-none -z-10"
+          className={clsx(
+            "absolute top-0 left-0 right-0 h-[1000px] bg-center bg-cover",
+            "bg-no-repeat pointer-events-none -z-10",
+          )}
           style={{ backgroundImage: "url('/imgs/hero-bg.png')" }}
         />
         <Navbar />

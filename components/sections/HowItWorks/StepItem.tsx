@@ -1,4 +1,5 @@
 import type { Step } from "@/types";
+import clsx from "clsx";
 
 interface StepItemProps {
   step: Step;
@@ -11,7 +12,12 @@ export default function StepItem({ step, isLast = false }: StepItemProps) {
       <div className="flex flex-col items-center">
         <div className="w-4 h-4 md:w-6 md:h-6 rounded-full bg-green-primary flex-shrink-0 mt-1" />
         {!isLast && (
-          <div className="w-px flex-1 border-l-2 md:border-l-4 border-dashed border-green-primary my-1 min-h-[40px]" />
+          <div
+            className={clsx(
+              "w-px flex-1 border-l-2 md:border-l-4 border-dashed",
+              "border-green-primary my-1 min-h-[40px]",
+            )}
+          />
         )}
       </div>
 

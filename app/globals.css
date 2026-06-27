@@ -51,3 +51,11 @@ body {
   color: var(--color-text-body);
   font-family: var(--font-body), sans-serif;
 }
+
+.font-heading {
+  font-family: var(--font-heading), sans-serif;
+}
+
+.font-body {
+  font-family: var(--font-body), sans-serif;
+}
