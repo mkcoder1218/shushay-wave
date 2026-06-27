@@ -43,7 +43,7 @@ export default function SectionHeading({
 
       <h2
         className={clsx(
-          "text-[#1A5A45] text-3xl font-bold md:text-3xl lg:text-4xl xl:text-[56px]",
+          "text-[#1A5A45] text-3xl font-bold md:text-3xl lg:text-4xl xl:text-[56px] whitespace-pre-line",
           titleClassName,
         )}
       >

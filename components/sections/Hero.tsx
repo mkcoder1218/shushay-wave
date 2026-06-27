@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <Section
       id="hero"
-      className="relative"
+      className="relative overflow-x-hidden"
       containerClassName="relative z-10 mx-auto px-4 text-center sm:px-6 lg:px-8"
     >
       <h1
@@ -35,11 +35,11 @@ export default function Hero() {
         </Button>
       </div>
 
-      <div className="flex items-end justify-center">
+      <div className="flex items-end justify-center overflow-hidden">
         <img
           src="/imgs/hero-image.png"
           alt="Wave app on mobile devices"
-          className="h-auto w-full max-w-md bg-contain md:max-w-xl lg:max-w-2xl xl:max-w-full"
+          className="h-auto w-[150%] max-w-none md:w-full md:max-w-xl lg:max-w-2xl xl:max-w-full"
         />
       </div>
     </Section>

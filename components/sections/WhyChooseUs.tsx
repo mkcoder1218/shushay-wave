@@ -85,11 +85,11 @@ export default function WhyChooseUs() {
               </p>
             </div>
           </div>
-          <div className="w-full md:w-1/2 flex items-end justify-center md:justify-end">
+          <div className="absolute bottom-0 -right-10 w-[120%] md:relative md:bottom-auto md:right-auto md:w-1/2 flex justify-end pointer-events-none">
             <img
               src="/imgs/woman-2.png"
               alt="Woman using Wave Equb"
-              className="w-full max-w-[260px] md:max-w-[200px] lg:max-w-[240px] xl:max-w-[220px] 2xl:max-w-none h-auto object-contain object-bottom"
+              className="w-full md:w-full h-auto object-contain"
             />
           </div>
         </div>

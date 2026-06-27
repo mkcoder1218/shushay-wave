@@ -17,7 +17,7 @@ export default function Features() {
 
       <Container className="relative py-12 md:py-14 lg:py-16 xl:py-16 2xl:py-20">
         <SectionHeading
-          title="Digital Equb, Zero Cash Risk"
+          title={"Digital Equb,\nZero Cash Risk"}
           titleClassName="text-center text-2xl text-[#85E040] md:text-transparent md:text-3xl lg:text-4xl xl:text-4xl 2xl:text-[48px]"
           className="mb-10 md:mb-10 lg:mb-12 xl:mb-12 2xl:mb-16"
         />
