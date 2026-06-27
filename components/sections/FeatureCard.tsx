@@ -10,7 +10,7 @@ export default function FeatureCard({ card }: FeatureCardProps) {
     <div
       key={card.title}
       className={clsx(
-        "flex flex-col gap-4 rounded-2xl bg-white p-6 pb-0 shadow-xl",
+        "relative flex flex-col gap-4 rounded-2xl bg-white p-6 pb-0 shadow-xl",
         card.center && "2xl:-mt-8",
       )}
     >
@@ -25,7 +25,7 @@ export default function FeatureCard({ card }: FeatureCardProps) {
           <div
             className={clsx(
               "overflow-hidden rounded-xl absolute left-1/2 -translate-x-1/2",
-              "top-155 min-[400px]:top-148 xl:top-50 2xl:left-196 2xl:top-50",
+              "-top-2 xl:-top-5 xl:left-46 2xl:left-35",
               "2xl:translate-x-0 2xl:mx-0 2xl:mb-0 2xl:shrink-0",
             )}
           >

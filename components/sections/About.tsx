@@ -24,9 +24,7 @@ export default function About() {
         </div>
 
         <div className="order-1 space-y-3 pr-10 md:order-2 md:pr-4 lg:pr-8 xl:pr-10">
-          <p
-            className="text-[18px] font-bold text-black md:pl-0 lg:pl-16 xl:pl-16 2xl:pl-30 font-heading"
-          >
+          <p className="text-[18px] font-bold text-black md:pl-0 lg:pl-16 xl:pl-16 2xl:pl-30 font-heading">
             About the App
           </p>
           <h2

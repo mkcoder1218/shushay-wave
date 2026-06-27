@@ -40,7 +40,7 @@ export default function Testimonials() {
         {/* Left side card */}
         <div
           className={clsx(
-            "hidden h-[380px] flex-shrink-0 rounded-3xl bg-[#1a1a1a] p-6 lg:block",
+            "hidden h-[380px] flex-shrink-0 rounded-3xl bg-[#3C3C3C] p-6 lg:block",
             "lg:w-[min(100%,640px)] xl:w-[min(100%,680px)] 2xl:h-[449px] 2xl:w-200",
           )}
         >
@@ -123,7 +123,7 @@ export default function Testimonials() {
         {/* Right side card */}
         <div
           className={clsx(
-            "hidden h-[380px] flex-shrink-0 rounded-3xl bg-gray-100 p-6",
+            "hidden h-[380px] flex-shrink-0 rounded-3xl bg-[#E5E5E5] p-6",
             "lg:block lg:w-[min(100%,640px)] xl:w-[min(100%,680px)] 2xl:h-[449px] 2xl:w-200",
           )}
         >
