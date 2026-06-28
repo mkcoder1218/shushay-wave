@@ -13,13 +13,13 @@ export default function Hero() {
         className={clsx(
           "font-heading mb-4 pt-10 text-3xl font-bold leading-tight text-green-primary",
           "sm:text-4xl md:pt-12 md:text-4xl lg:pt-16 lg:text-5xl xl:pt-20 2xl:text-[64px]",
-          "mx-auto max-w-[420px] lg:max-w-[820px] xl:max-w-none",
+          "mx-auto max-w-105 lg:max-w-205 xl:max-w-none",
         )}
       >
         Transforming Equb For The Digital Age
       </h1>
 
-      <p className="mx-auto mb-8 max-w-[362px] md:max-w-[608px] text-base 2xl:text-[18px] font-medium text-text-body font-heading">
+      <p className="mx-auto mb-8 max-w-90 md:max-w-152 text-base 2xl:text-[18px] font-medium text-text-body font-heading">
         Save Together, Access Funds Easily, And Manage Your Equb Anytime,
         Anywhere With Wave.
       </p>
@@ -27,16 +27,18 @@ export default function Hero() {
       <div className="mb-6 flex justify-center md:mb-6 lg:mb-7 xl:mb-8">
         <Button
           className={clsx(
-            "font-semibold h-12 gap-2 rounded-xl pl-5 pr-2 text-base text-white",
-            "hover:bg-green-hover md:h-12 lg:h-14 xl:h-[62px] 2xl:text-[20px] font-poppins",
+            "font-semibold h-10 gap-2 rounded-xl pl-5 pr-2",
+            "hover:bg-green-hover md:h-12 lg:h-14 xl:h-16 ",
           )}
           type="button"
         >
-          <span>Get the App</span>
+          <span className="text-[14px] text-base text-white 2xl:text-[20px] font-poppins">
+            Get the App
+          </span>
           <img
             src="/icons/Arrow.svg"
             alt=""
-            className="h-8 w-8 lg:h-9 lg:w-9 xl:h-9 xl:w-9"
+            className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 lg:h-9 lg:w-9 xl:h-9 xl:w-9"
           />
         </Button>
       </div>
