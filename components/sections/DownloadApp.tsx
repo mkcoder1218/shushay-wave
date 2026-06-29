@@ -26,7 +26,7 @@ export default function DownloadApp() {
         />
       </div>
 
-      <Container className="relative px-4 md:mx-4 lg:mx-8 xl:mx-12 2xl:ml-100 2xl:mr-100">
+      <Container className="relative px-4 md:mx-4 lg:mx-8 xl:mx-12 2xl:mx-50 min-[120rem]:mx-100">
         <div
           className={clsx(
             "relative rounded-3xl overflow-hidden min-h-[300px] md:min-h-[300px]",

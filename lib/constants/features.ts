@@ -39,15 +39,14 @@ export const FEATURE_CARDS: FeatureCard[] = [
     title: "Easy Equb Creation & Management",
     description:
       "Create or join Equb groups and manage everything in one place.",
-    image: "/imgs/phone 1.png",
+    image: "/imgs/phone 2.png",
     alt: "Equb creation screen",
     center: true,
   },
   {
     title: "Smart Automated Contributions",
-    description:
-      "Stay on track with scheduled payments and instant reminders.",
-    image: "/imgs/phone-3.png",
+    description: "Stay on track with scheduled payments and instant reminders.",
+    image: "/imgs/phone 3.png",
     alt: "Account screen",
     center: false,
   },

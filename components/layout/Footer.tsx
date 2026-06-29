@@ -13,7 +13,7 @@ export default function Footer() {
       )}
     >
       <Container>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8 lg:gap-12 xl:gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 md:gap-8 lg:gap-12 xl:gap-16">
           {/* Brand */}
           <div className="space-y-5">
             <img src="/icons/logo-2.svg" alt="Wave" />
@@ -68,7 +68,7 @@ export default function Footer() {
           </div>
 
           {/* Contact */}
-          <div className="space-y-2 md:text-right">
+          <div className="space-y-2 lg:text-right">
             <p className="text-[14px] font-semibold uppercase tracking-widest mb-3">
               Contact Info
             </p>
@@ -81,7 +81,7 @@ export default function Footer() {
             <p className="text-white text-[14px] xl:text-base">
               Addis Ababa, Ethiopia
             </p>
-            <div className="md:flex md:justify-end mt-6">
+            <div className="md:flex lg:justify-end mt-6">
               <a
                 href="mailto:info@Tilaequb.com"
                 className={clsx(

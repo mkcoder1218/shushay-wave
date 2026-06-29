@@ -38,7 +38,7 @@ export default function Navbar() {
       }`}
     >
       <Container className="px-4 sm:px-6 lg:px-12">
-        <div className="flex items-center justify-between gap-3 md:gap-4 h-16 xl:h-[136px]">
+        <div className="flex items-center justify-between gap-3 md:gap-4 h-16 2xl:h-[136px]">
           <Link href="/" className="flex items-center shrink-0">
             <img
               src="/icons/logo-1.svg"
@@ -71,7 +71,7 @@ export default function Navbar() {
             <Button
               variant="primary"
               size="sm"
-              className="rounded-full xl:px-6 xl:py-4 2xl:text-[20px]"
+              className="rounded-full 2xl:px-6 2xl:py-4 2xl:text-[20px]"
             >
               Download App
             </Button>

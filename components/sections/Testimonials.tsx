@@ -22,7 +22,7 @@ export default function Testimonials() {
       className="bg-bg-section py-16 md:py-16 lg:py-20 xl:py-24 max-w-full"
     >
       <div className="mb-12 px-4 text-center">
-        <p className="mb-2 text-14px] 2xl:text-[18px] font-medium text-green-primary">
+        <p className="mb-2 text-[14px] 2xl:text-[18px] font-medium text-green-primary">
           Testimonials
         </p>
         <h2 className="text-[24px] font-bold text-green-primary md:text-3xl lg:text-4xl xl:text-[56px]">
@@ -34,14 +34,14 @@ export default function Testimonials() {
         className={clsx(
           "relative mx-auto flex w-full items-center justify-center gap-3 overflow-hidden",
           "px-4 md:w-full lg:w-[90%] xl:w-full xl:max-w-[1200px]",
-          "xl:gap-4 2xl:w-400 2xl:max-w-none 2xl:gap-4",
+          "xl:gap-4 2xl:w-full 2xl:max-w-[1600px] 2xl:gap-4",
         )}
       >
         {/* Left side card */}
         <div
           className={clsx(
             "hidden h-[132px] lg:h-[380px] flex-shrink-0 rounded-3xl bg-[#3C3C3C] p-6 lg:block",
-            "lg:w-[min(100%,640px)] xl:w-[min(100%,680px)] 2xl:h-[449px] 2xl:w-200",
+            "lg:w-[min(100%,640px)] xl:w-[min(100%,680px)] 2xl:h-[449px] 2xl:w-[min(100%,800px)]",
           )}
         >
           <TestimonialCard
@@ -54,7 +54,7 @@ export default function Testimonials() {
           />
         </div>
 
-        <div className="relative w-full flex-shrink-0 lg:w-[min(100%,640px)] xl:w-[min(100%,680px)] 2xl:w-200">
+        <div className="relative w-full flex-shrink-0 lg:w-[min(100%,640px)] xl:w-[min(100%,680px)] 2xl:w-[min(100%,800px)]">
           <button
             onClick={prev}
             className={clsx(
@@ -124,7 +124,7 @@ export default function Testimonials() {
         <div
           className={clsx(
             "hidden h-[132px] lg:h-[380px] flex-shrink-0 rounded-3xl bg-[#E5E5E5] p-6",
-            "lg:block lg:w-[min(100%,640px)] xl:w-[min(100%,680px)] 2xl:h-[449px] 2xl:w-200",
+            "lg:block lg:w-[min(100%,640px)] xl:w-[min(100%,680px)] 2xl:h-[449px] 2xl:w-[min(100%,800px)]",
           )}
         >
           <TestimonialCard

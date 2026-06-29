@@ -14,12 +14,12 @@ export default function About() {
       id="about"
       className="bg-bg-section py-16 md:py-16 lg:py-20 xl:py-24"
     >
-      <div className="grid items-center gap-6 md:grid-cols-2 lg:gap-12 xl:gap-16">
+      <div className="grid items-center gap-0 md:grid-cols-2 lg:gap-12 xl:gap-16">
         <div className="order-2 flex justify-center md:order-1 md:justify-start">
           <img
             src="/imgs/woman.png"
             alt="Woman using Wave Equb app"
-            className="h-auto w-full max-w-sm object-contain md:max-w-md lg:max-w-lg xl:max-w-full"
+            className="h-auto w-full max-w-sm object-contain  md:max-w-md lg:max-w-lg xl:max-w-full"
           />
         </div>
 

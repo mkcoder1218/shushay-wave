@@ -8,7 +8,7 @@ export default function Features() {
   return (
     <section
       id="features"
-      className="relative overflow-hidden bg-bg-section px-4 md:px-6 lg:px-10 xl:px-12 2xl:px-20"
+      className="relative overflow-hidden bg-bg-section px-4 sm:px-20 md:px-30 lg:px-10 xl:px-12 2xl:px-20"
     >
       <div
         className={clsx(
@@ -35,8 +35,8 @@ export default function Features() {
 
         <div
           className={clsx(
-            "grid grid-cols-1 items-end gap-6 px-2 text-center",
-            "md:px-4 lg:px-5 xl:grid-cols-3 xl:px-4 2xl:px-6",
+            "grid grid-cols-1 items-stretch gap-12 px-2 text-center",
+            "md:px-4 lg:px-5 lg:grid-cols-2 lg:gap-6 xl:grid-cols-3 xl:px-4 2xl:px-6",
           )}
         >
           {FEATURE_CARDS.map((card) => (

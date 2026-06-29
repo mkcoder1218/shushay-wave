@@ -23,7 +23,7 @@ export default function WhyChooseUs() {
           {/* Card 1 */}
           <div
             className={clsx(
-              "relative rounded-3xl w-full 2xl:w-200 overflow-hidden bg-gradient-to-b",
+              "relative rounded-3xl w-full overflow-hidden bg-gradient-to-b",
               "from-green-accent to-green-primary min-h-[340px] flex flex-col",
             )}
           >
@@ -35,7 +35,7 @@ export default function WhyChooseUs() {
               >
                 You Only Need One App
               </p>
-              <h3 className="text-white text-[48px] 2xl:text-[68px] font-bold">
+              <h3 className="text-white text-[32px] lg:text-[48px] 2xl:text-[68px] font-bold">
                 Save smarter with a trusted digital Equb.
               </h3>
             </div>
@@ -45,7 +45,7 @@ export default function WhyChooseUs() {
                 alt="Man using Wave Equb"
                 className={clsx(
                   "w-full max-w-[260px] md:max-w-[200px] lg:max-w-[240px] xl:max-w-[220px]",
-                  "2xl:max-w-none h-auto object-contain object-bottom",
+                  "2xl:max-w-[320px] h-auto object-contain object-bottom",
                 )}
               />
             </div>
@@ -54,7 +54,7 @@ export default function WhyChooseUs() {
           {/* Card 2 */}
           <div
             className={clsx(
-              "relative rounded-3xl w-full 2xl:w-200 overflow-hidden  flex flex-col",
+              "relative rounded-3xl w-full overflow-hidden  flex flex-col",
               "bg-gradient-to-b from-green-primary to-green-accent min-h-[340px]",
             )}
           >
@@ -62,15 +62,15 @@ export default function WhyChooseUs() {
               <p className="text-green-accent text-base 2xl:text-[28px] uppercase  mb-3">
                 Simple Control
               </p>
-              <h3 className="text-white text-[48px] 2xl:text-[68px] font-bold">
+              <h3 className="text-white text-[32px] lg:text-[48px] 2xl:text-[68px] xl:px-5 font-bold">
                 Easily manage your Equb with reliability.
               </h3>
             </div>
             <div className="flex-1 flex items-end justify-center">
               <img
-                src="/imgs/phone 2.png"
+                src="/imgs/phone 4.png"
                 alt="Equb details screen"
-                className="w-[250px] md:w-[180px] lg:w-[220px] xl:w-[200px] 2xl:w-150 object-bottom"
+                className="w-[250px] md:w-[180px] lg:w-[220px] xl:w-[200px] 2xl:w-[280px] object-bottom"
               />
             </div>
           </div>
