@@ -24,13 +24,13 @@ export default function About() {
         </div>
 
         <div className="order-1 space-y-3 pr-10 md:order-2 md:pr-4 lg:pr-8 xl:pr-10">
-          <p className="text-[18px] font-bold text-black md:pl-0 lg:pl-16 xl:pl-16 2xl:pl-30 font-heading">
+          <p className="text-[12px] lg:text-[18px] font-bold text-black md:pl-0 lg:pl-16 xl:pl-16 2xl:pl-30 font-heading">
             About the App
           </p>
           <h2
             className={clsx(
-              "font-heading text-3xl font-bold leading-tight text-green-primary md:pl-0 md:text-5xl",
-              "lg:pl-16 lg:text-7xl xl:pl-16 xl:text-7xl 2xl:pl-30 2xl:text-[96px]",
+              "font-heading text-[32px] font-bold text-green-primary md:pl-0",
+              "lg:pl-16 xl:pl-16  2xl:pl-30 2xl:text-[96px]",
             )}
           >
             Wave Equb
@@ -40,10 +40,7 @@ export default function About() {
             {aboutParagraphs.map((paragraph) => (
               <p
                 key={paragraph}
-                className={clsx(
-                  "text-base leading-relaxed text-text-body md:text-base",
-                  "lg:text-xl xl:text-xl 2xl:text-[24px]",
-                )}
+                className="text-base text-text-body 2xl:text-[24px]"
               >
                 {paragraph}
               </p>

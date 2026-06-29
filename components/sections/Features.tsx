@@ -13,7 +13,7 @@ export default function Features() {
       <div
         className={clsx(
           "absolute left-4 right-4 top-0 hidden h-full rounded-2xl bg-cover",
-          "lg:left-6 lg:right-6 lg:block lg:h-[55%] lg:left-10 lg:right-10",
+          "lg:left-6 lg:right-6 xl:block lg:h-[55%] lg:left-10 lg:right-10",
           "xl:left-12 xl:right-12 2xl:left-20 2xl:right-20",
         )}
         style={{ backgroundImage: "url('/imgs/feattures-bg.png')" }}
@@ -21,7 +21,7 @@ export default function Features() {
       <div
         className={clsx(
           "absolute left-4 right-4 top-0 h-full rounded-2xl bg-[#1A5A45] bg-cover",
-          "lg:hidden lg:h-[55%] lg:left-6 lg:right-6 lg:left-10 lg:right-10",
+          "xl:hidden xl:h-[55%] lg:left-6 lg:right-6 lg:left-10 lg:right-10",
           "xl:left-12 xl:right-12 2xl:left-20 2xl:right-20",
         )}
       />
@@ -36,7 +36,7 @@ export default function Features() {
         <div
           className={clsx(
             "grid grid-cols-1 items-end gap-6 px-2 text-center",
-            "md:px-4 lg:grid-cols-2 lg:px-5 xl:grid-cols-3 xl:px-4 2xl:px-6",
+            "md:px-4 lg:px-5 xl:grid-cols-3 xl:px-4 2xl:px-6",
           )}
         >
           {FEATURE_CARDS.map((card) => (

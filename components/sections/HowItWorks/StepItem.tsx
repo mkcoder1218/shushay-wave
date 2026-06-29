@@ -22,10 +22,10 @@ export default function StepItem({ step, isLast = false }: StepItemProps) {
       </div>
 
       <div className="pb-8">
-        <h3 className="text-green-primary font-bold text-xl md:text-xl lg:text-2xl xl:text-[32px] mb-1">
+        <h3 className="text-green-primary font-bold text-[24px] 2xl:text-[32px] mb-1">
           {step.title}
         </h3>
-        <p className="text-text-muted text-sm md:text-base lg:text-lg xl:text-[20px] font-medium leading-relaxed">
+        <p className="text-text-muted text-base 2xl:text-[20px] font-medium">
           {step.description} {step.details}
         </p>
       </div>

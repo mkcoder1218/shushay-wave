@@ -36,15 +36,10 @@ export default function FeatureCard({ card }: FeatureCardProps) {
             />
           </div>
           <div className="relative z-10 w-full">
-            <h3 className="text-lg font-bold text-[#1A5A45] md:text-xl lg:text-2xl xl:text-2xl 2xl:text-[32px]">
+            <h3 className="text-[24px] font-bold text-[#1A5A45]  2xl:text-[32px]">
               {card.title}
             </h3>
-            <p
-              className={clsx(
-                "text-sm text-[#242424] md:px-2 md:text-sm lg:px-3",
-                "lg:text-base xl:px-2 xl:text-base 2xl:px-5 2xl:text-[18px]",
-              )}
-            >
+            <p className="text-base text-[#242424] md:px-2 md:text-sm lg:px-3 2xl:text-[18px] xl:px-2 2xl:px-5">
               {card.description}
             </p>
           </div>
@@ -52,12 +47,7 @@ export default function FeatureCard({ card }: FeatureCardProps) {
       ) : (
         <div className="flex h-full flex-col justify-between overflow-hidden 2xl:h-[628px]">
           <div>
-            <h3
-              className={clsx(
-                "text-lg font-bold text-[#1A5A45] md:px-4 md:text-xl lg:px-6",
-                "lg:text-2xl xl:px-4 xl:text-2xl 2xl:px-10 2xl:text-[32px]",
-              )}
-            >
+            <h3 className="font-bold text-[#1A5A45] md:px-4 md:text-xl lg:px-6 text-[24px] 2xl:px-10 2xl:text-[32px]">
               {card.title}
             </h3>
             <p

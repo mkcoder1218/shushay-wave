@@ -24,10 +24,10 @@ export default function Contact() {
             )}
           >
             <div>
-              <h2 className="text-green-primary text-3xl md:text-4xl lg:text-5xl xl:text-[64px] font-bold mb-4">
+              <h2 className="text-green-primary text-[48px] 2xl:text-[64px] font-bold mb-4">
                 Let&apos;s Talk
               </h2>
-              <p className="text-text-body text-base md:text-base lg:text-lg xl:text-[20px] leading-relaxed">
+              <p className="text-text-body text-base  2xl:text-[20px]">
                 Have questions, feedback, or want to get started? Our team is
                 here to assist you.
               </p>
@@ -35,16 +35,16 @@ export default function Contact() {
 
             <div className="grid grid-cols-2 md:grid-cols-1 gap-6 md:gap-6 lg:gap-7 xl:gap-8">
               <div>
-                <h3 className="text-green-primary text-xl md:text-xl lg:text-2xl xl:text-[32px] font-bold mb-1">
+                <h3 className="text-green-primary text-[24px] 2xl:text-[32px] font-bold mb-1">
                   Email
                 </h3>
-                <p className="text-text-body text-sm md:text-sm lg:text-base xl:text-[16px] break-words">
+                <p className="text-text-body text-base break-words">
                   Waveafricansocial@gmail.com
                 </p>
               </div>
 
               <div>
-                <h3 className="text-green-primary text-lg md:text-lg lg:text-xl font-bold mb-2">
+                <h3 className="text-green-primary text-[24px] 2xl:text-[32px] font-bold mb-2">
                   Socials
                 </h3>
                 <ul className="space-y-1">
@@ -52,10 +52,7 @@ export default function Contact() {
                     <li key={social}>
                       <a
                         href="#"
-                        className={clsx(
-                          "text-text-body text-sm md:text-sm lg:text-base xl:text-[16px]",
-                          "underline underline-offset-2 transition-colors",
-                        )}
+                        className="text-text-body text-sm lg:text-base underline underline-offset-2"
                       >
                         {social}
                       </a>
@@ -76,7 +73,7 @@ export default function Contact() {
               { label: "Email", type: "email", name: "email" },
             ].map((field) => (
               <div key={field.name}>
-                <label className="text-text-body text-sm md:text-base lg:text-base xl:text-[18px] mb-1 block">
+                <label className="text-text-body text-base 2xl:text-[18px] mb-1 block">
                   {field.label}
                 </label>
                 <input
@@ -84,7 +81,7 @@ export default function Contact() {
                   name={field.name}
                   className={clsx(
                     "w-full bg-input-bg rounded-xl px-4 md:px-4 lg:px-5 h-14 md:h-14 lg:h-16",
-                    "xl:h-[65px] text-gray-800 text-sm md:text-base lg:text-base xl:text-[18px]",
+                    "xl:h-[65px] text-gray-800 text-base 2xl:text-[18px]",
                     "outline-none focus:ring-2 focus:ring-green-primary",
                   )}
                 />
@@ -92,7 +89,7 @@ export default function Contact() {
             ))}
 
             <div>
-              <label className="text-text-body text-sm md:text-base lg:text-base xl:text-[18px] mb-1 block">
+              <label className="text-text-body text-base 2xl:text-[18px] mb-1 block">
                 Message
               </label>
               <textarea
@@ -100,8 +97,8 @@ export default function Contact() {
                 rows={6}
                 className={clsx(
                   "w-full bg-input-bg rounded-xl px-4 md:px-4 lg:px-5 py-4",
-                  "h-[160px] md:h-[160px] lg:h-[180px] xl:h-[211px] text-gray-800 text-sm",
-                  "md:text-base lg:text-base xl:text-[18px]",
+                  "h-[160px] md:h-[160px] lg:h-[180px] xl:h-[211px] text-gray-800 ",
+                  "text-base 2xl:text-[18px]",
                   "outline-none resize-none focus:ring-2 focus:ring-green-primary",
                 )}
               />
@@ -110,9 +107,8 @@ export default function Contact() {
             <button
               type="submit"
               className={clsx(
-                "w-full bg-green-primary cursor-pointer text-white font-medium",
-                "h-12 md:h-12 lg:h-14 xl:h-[56px] rounded-xl text-base md:text-base",
-                "lg:text-lg xl:text-[20px] hover:bg-green-hover transition-colors",
+                "w-full bg-green-primary cursor-pointer text-white text-[20px] font-medium font-popins",
+                "h-12 md:h-12 lg:h-14 xl:h-[56px] rounded-xl hover:bg-green-hover transition-colors",
               )}
             >
               Submit

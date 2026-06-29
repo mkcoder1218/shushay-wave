@@ -7,42 +7,42 @@ html {
 :root {
   /* Brand colors */
   --color-green-primary: #1a5a45;
-  --color-green-accent:  #85e040;
-  --color-green-dark:    #0d3025;
-  --color-green-hover:   #154a38;
+  --color-green-accent: #85e040;
+  --color-green-dark: #0d3025;
+  --color-green-hover: #154a38;
 
   /* Surface / background colors */
-  --color-bg-section:    #f8ffe4;
-  --color-bg-dark:       #1a1a19;
+  --color-bg-section: #f8ffe4;
+  --color-bg-dark: #1a1a19;
 
   /* Text colors */
-  --color-text-body:     #242424;
-  --color-text-muted:    #3c3c3c;
-  --color-text-dark:     #1a2e1a;
+  --color-text-body: #242424;
+  --color-text-muted: #3c3c3c;
+  --color-text-dark: #1a2e1a;
 
   /* Input */
-  --color-input-bg:      #e5e5e5;
+  --color-input-bg: #e5e5e5;
 
   /* Font families */
   --font-heading: var(--font-be-vietnam-pro);
-  --font-body:    var(--font-geist);
+  --font-body: var(--font-geist);
 }
 
 @theme inline {
   /* Expose colors as Tailwind utilities */
   --color-green-primary: var(--color-green-primary);
-  --color-green-accent:  var(--color-green-accent);
-  --color-green-dark:    var(--color-green-dark);
-  --color-green-hover:   var(--color-green-hover);
-  --color-bg-section:    var(--color-bg-section);
-  --color-bg-dark:       var(--color-bg-dark);
-  --color-text-body:     var(--color-text-body);
-  --color-text-muted:    var(--color-text-muted);
-  --color-text-dark:     var(--color-text-dark);
-  --color-input-bg:      var(--color-input-bg);
+  --color-green-accent: var(--color-green-accent);
+  --color-green-dark: var(--color-green-dark);
+  --color-green-hover: var(--color-green-hover);
+  --color-bg-section: var(--color-bg-section);
+  --color-bg-dark: var(--color-bg-dark);
+  --color-text-body: var(--color-text-body);
+  --color-text-muted: var(--color-text-muted);
+  --color-text-dark: var(--color-text-dark);
+  --color-input-bg: var(--color-input-bg);
 
   /* Fonts */
-  --font-sans:    var(--font-body);
+  --font-sans: var(--font-body);
   --font-heading: var(--font-heading);
 }
 
@@ -58,4 +58,8 @@ body {
 
 .font-body {
   font-family: var(--font-body), sans-serif;
+}
+
+.font-poppins {
+  font-family: var(--font-poppins), sans-serif;
 }

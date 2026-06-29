@@ -22,10 +22,10 @@ export default function Testimonials() {
       className="bg-bg-section py-16 md:py-16 lg:py-20 xl:py-24 max-w-full"
     >
       <div className="mb-12 px-4 text-center">
-        <p className="mb-2 text-[18px] font-medium text-green-primary">
+        <p className="mb-2 text-14px] 2xl:text-[18px] font-medium text-green-primary">
           Testimonials
         </p>
-        <h2 className="text-3xl font-bold text-green-primary md:text-3xl lg:text-4xl xl:text-[56px]">
+        <h2 className="text-[24px] font-bold text-green-primary md:text-3xl lg:text-4xl xl:text-[56px]">
           What Our Customers Are Saying
         </h2>
       </div>
@@ -40,16 +40,16 @@ export default function Testimonials() {
         {/* Left side card */}
         <div
           className={clsx(
-            "hidden h-[380px] flex-shrink-0 rounded-3xl bg-[#3C3C3C] p-6 lg:block",
+            "hidden h-[132px] lg:h-[380px] flex-shrink-0 rounded-3xl bg-[#3C3C3C] p-6 lg:block",
             "lg:w-[min(100%,640px)] xl:w-[min(100%,680px)] 2xl:h-[449px] 2xl:w-200",
           )}
         >
           <TestimonialCard
             testimonial={TESTIMONIALS[getIndex(-1)]}
             className="h-full"
-            quoteClassName="text-sm leading-relaxed text-gray-300 lg:text-lg xl:text-[24px]"
-            nameClassName="text-sm font-bold text-white lg:text-base xl:text-[20px]"
-            companyClassName="text-xs text-gray-500 lg:text-sm xl:text-[16px]"
+            quoteClassName="text-sm text-gray-300 2xl:text-[24px]"
+            nameClassName="text-sm font-bold text-white  2xl:text-[20px]"
+            companyClassName="text-xs text-white 2xl:text-[16px]"
             avatarClassName="h-9 w-9 rounded-full object-cover"
           />
         </div>
@@ -82,15 +82,15 @@ export default function Testimonials() {
           <div
             key={active}
             className={clsx(
-              "flex min-h-[280px] h-auto flex-col justify-between rounded-3xl bg-green-accent/30",
-              "p-8 shadow-xl md:p-8 lg:h-[380px] lg:p-9 xl:p-9 2xl:h-[449px] 2xl:p-10",
+              "flex min-h-[280px] h-[132px] lg:h-[380px] h-auto flex-col justify-between rounded-3xl bg-green-accent/30",
+              "p-8 shadow-xl md:p-8 lg:p-9 xl:p-9 2xl:h-[449px] 2xl:p-10",
             )}
           >
             <TestimonialCard
               testimonial={TESTIMONIALS[active]}
-              quoteClassName="text-center text-sm leading-relaxed text-[#1a2e1a] md:text-base lg:text-lg xl:text-[24px]"
-              nameClassName="text-sm font-bold text-[#1a2e1a] lg:text-base xl:text-[20px]"
-              companyClassName="text-xs text-[#1a2e1a]/70 lg:text-sm xl:text-[16px]"
+              quoteClassName="text-center text-sm text-[#1a2e1a] 2xl:text-[24px]"
+              nameClassName="text-sm font-bold text-[#1a2e1a] 2xl:text-[20px]"
+              companyClassName="text-xs text-[#1a2e1a]/70 lg:text-sm 2xl:text-[16px]"
               avatarClassName="h-12 w-12 rounded-full object-cover"
             />
           </div>
@@ -123,16 +123,16 @@ export default function Testimonials() {
         {/* Right side card */}
         <div
           className={clsx(
-            "hidden h-[380px] flex-shrink-0 rounded-3xl bg-[#E5E5E5] p-6",
+            "hidden h-[132px] lg:h-[380px] flex-shrink-0 rounded-3xl bg-[#E5E5E5] p-6",
             "lg:block lg:w-[min(100%,640px)] xl:w-[min(100%,680px)] 2xl:h-[449px] 2xl:w-200",
           )}
         >
           <TestimonialCard
             testimonial={TESTIMONIALS[getIndex(1)]}
             className="h-full"
-            quoteClassName="text-sm leading-relaxed text-gray-700 lg:text-lg xl:text-[24px]"
-            nameClassName="text-sm font-bold text-[#1A1A1A] lg:text-base xl:text-[20px]"
-            companyClassName="text-xs text-gray-500 lg:text-sm xl:text-[16px]"
+            quoteClassName="text-sm text-gray-700 2xl:text-[24px]"
+            nameClassName="text-sm font-bold text-[#1A1A1A] 2xl:text-[20px]"
+            companyClassName="text-xs text-[#3A3A3A] 2xl:text-[16px]"
             avatarClassName="h-9 w-9 rounded-full object-cover"
           />
         </div>

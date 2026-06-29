@@ -12,6 +12,9 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
+    // Set correct initial state on mount (handles reload while scrolled)
+    setScrolled(window.scrollY > 10);
+
     const onScroll = () => setScrolled(window.scrollY > 10);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -35,12 +38,12 @@ export default function Navbar() {
       }`}
     >
       <Container className="px-4 sm:px-6 lg:px-12">
-        <div className="flex items-center justify-between gap-3 md:gap-4 h-16 md:h-20 lg:h-28 xl:h-[136px]">
+        <div className="flex items-center justify-between gap-3 md:gap-4 h-16 xl:h-[136px]">
           <Link href="/" className="flex items-center shrink-0">
             <img
               src="/icons/logo-1.svg"
               alt="Logo"
-              className="h-10 md:h-12 lg:h-16 xl:h-full"
+              className="h-10  xl:h-full"
             />
           </Link>
 
@@ -55,8 +58,8 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 className={clsx(
-                  "text-green-primary font-bold text-sm lg:text-base xl:text-[20px]",
-                  "hover:opacity-80 transition-opacity whitespace-nowrap",
+                  "text-green-primary font-bold text-sm lg:text-base 2xl:text-[20px]",
+                  "hover:opacity-80 transition-opacity whitespace-nowrap font-heading",
                 )}
               >
                 {link.label}
@@ -68,7 +71,7 @@ export default function Navbar() {
             <Button
               variant="primary"
               size="sm"
-              className="rounded-full xl:px-6 xl:py-4 xl:text-[20px]"
+              className="rounded-full xl:px-6 xl:py-4 2xl:text-[20px]"
             >
               Download App
             </Button>

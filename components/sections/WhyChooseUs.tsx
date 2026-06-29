@@ -15,7 +15,7 @@ export default function WhyChooseUs() {
       className="bg-bg-section py-16 md:py-16 lg:py-20 xl:py-20 px-4 md:px-6 lg:px-10 xl:px-20"
     >
       <Container>
-        <h2 className="text-green-primary text-2xl md:text-3xl lg:text-4xl xl:text-[56px] font-bold mb-8">
+        <h2 className="text-green-primary text-[32px] 2xl:text-[56px] font-bold mb-5">
           Why Choose Wave Equb
         </h2>
 
@@ -30,13 +30,12 @@ export default function WhyChooseUs() {
             <div className="p-6 md:p-6 lg:p-7 xl:p-8 text-center">
               <p
                 className={clsx(
-                  "text-green-primary text-base md:text-lg lg:text-xl",
-                  "xl:text-[28px] uppercase tracking-widest mb-3",
+                  "text-green-primary text-base 2xl:text-[28px] uppercase mb-3",
                 )}
               >
                 You Only Need One App
               </p>
-              <h3 className="text-white text-2xl md:text-2xl lg:text-4xl xl:text-[68px] font-bold leading-snug">
+              <h3 className="text-white text-[48px] 2xl:text-[68px] font-bold">
                 Save smarter with a trusted digital Equb.
               </h3>
             </div>
@@ -60,10 +59,10 @@ export default function WhyChooseUs() {
             )}
           >
             <div className="p-6 md:p-6 lg:p-7 xl:p-8 text-center">
-              <p className="text-green-accent text-base md:text-lg lg:text-xl xl:text-[28px] uppercase tracking-widest mb-3">
+              <p className="text-green-accent text-base 2xl:text-[28px] uppercase  mb-3">
                 Simple Control
               </p>
-              <h3 className="text-white text-2xl md:text-2xl lg:text-4xl xl:text-[68px] font-bold leading-snug">
+              <h3 className="text-white text-[48px] 2xl:text-[68px] font-bold">
                 Easily manage your Equb with reliability.
               </h3>
             </div>
@@ -101,24 +100,26 @@ export default function WhyChooseUs() {
               ))}
             </div>
             <div>
-              <h3 className="text-green-primary text-2xl md:text-2xl lg:text-3xl xl:text-[48px] font-bold mb-2">
+              <h3 className="text-green-primary text-2xl md:text-2xl lg:text-3xl 2xl:text-[48px] font-bold mb-2">
                 Save Anytime, Anywhere
               </h3>
-              <p className="text-text-body text-base md:text-base lg:text-xl xl:text-[28px]">
+              <p className="text-text-body text-base md:text-base lg:text-xl 2xl:text-[28px]">
                 Stay connected to your Equb wherever you are, without limits.
               </p>
             </div>
           </div>
           <div
             className={clsx(
-              "absolute bottom-0 -right-10 w-[120%] md:relative md:bottom-auto",
-              "md:right-auto md:w-1/2 flex justify-end pointer-events-none",
+              "absolute bottom-0 -right-10 w-full  md:bottom-0",
+              "md:-right-10 md:w-[60%] flex justify-end pointer-events-none",
+              "xl:right-0 xl:bottom-0",
+              "2xl:relative 2xl:bottom-auto 2xl:right-auto 2xl:w-1/2",
             )}
           >
             <img
               src="/imgs/woman-2.png"
               alt="Woman using Wave Equb"
-              className="w-full md:w-full h-auto object-contain"
+              className="w-full md:w-full h-auto object-cover"
             />
           </div>
         </div>

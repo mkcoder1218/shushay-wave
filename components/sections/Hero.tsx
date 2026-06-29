@@ -12,18 +12,13 @@ export default function Hero() {
       <h1
         className={clsx(
           "font-heading mb-4 pt-10 text-3xl font-bold leading-tight text-green-primary",
-          "sm:text-4xl md:pt-12 md:text-4xl lg:pt-16 lg:text-5xl xl:pt-20 xl:text-[64px]",
+          "sm:text-4xl md:pt-12 md:text-4xl lg:pt-16 lg:text-5xl xl:pt-20 2xl:text-[64px]",
         )}
       >
         Transforming Equb For The Digital Age
       </h1>
 
-      <p
-        className={clsx(
-          "mx-auto mb-8 max-w-2xl text-sm font-medium text-text-body",
-          "sm:text-base md:text-base lg:text-lg xl:text-[18px]",
-        )}
-      >
+      <p className="mx-auto mb-8 max-w-2xl text-base 2xl:text-[18px] font-medium text-text-body font-heading">
         Save Together, Access Funds Easily, And Manage Your Equb Anytime,
         Anywhere With Wave.
       </p>
@@ -31,8 +26,8 @@ export default function Hero() {
       <div className="mb-6 flex justify-center md:mb-6 lg:mb-7 xl:mb-8">
         <Button
           className={clsx(
-            "font-heading h-12 gap-2 rounded-xl pl-5 pr-2 text-base text-white transition-colors",
-            "hover:bg-green-hover md:h-12 lg:h-14 lg:text-lg xl:h-[62px] xl:text-[20px]",
+            "font-semibold h-12 gap-2 rounded-xl pl-5 pr-2 text-base text-white",
+            "hover:bg-green-hover md:h-12 lg:h-14 xl:h-[62px] 2xl:text-[20px] font-poppins",
           )}
           type="button"
         >

@@ -52,6 +52,16 @@ const beVietnamPro = localFont({
   ],
   variable: "--font-be-vietnam-pro",
 });
+const poppins = localFont({
+  src: [
+    {
+      path: "../public/fonts/Poppins-SemiBold.ttf",
+      weight: "600",
+      style: "semibold",
+    },
+  ],
+  variable: "--font-poppins",
+});
 
 export const metadata: Metadata = {
   title: "Wave Equb – Transforming Equb For The Digital Age",
@@ -65,7 +75,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geist.variable} ${beVietnamPro.variable} h-full antialiased`}
+      className={`${geist.variable} ${beVietnamPro.variable} ${poppins.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col relative">
         {/* Hero background — covers navbar + hero area */}
