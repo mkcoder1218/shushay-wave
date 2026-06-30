@@ -13,6 +13,46 @@ export default function FeatureCard({ card }: FeatureCardProps) {
         "relative flex flex-col gap-4 rounded-2xl bg-white p-6 pb-0 shadow-xl",
       )}
     >
+      {/* clipped wrapper just for the ellipses */}
+      <div className="absolute inset-0 overflow-hidden rounded-2xl pointer-events-none">
+        <img
+          src={
+            card.center
+              ? "/icons/ellipse-center.svg"
+              : "/icons/ellipse-side.svg"
+          }
+          alt="ellipse"
+          className={clsx(
+            "absolute opacity-30 left-1/2 -translate-x-1/2",
+            card.center ? "bottom-0" : "top-0",
+          )}
+        />
+        <img
+          src={
+            card.center
+              ? "/icons/ellipse-center.svg"
+              : "/icons/ellipse-side.svg"
+          }
+          alt="ellipse"
+          className={clsx(
+            "absolute opacity-30 left-1/2 -translate-x-1/2 w-[80%]",
+            card.center ? "bottom-0" : "top-0",
+          )}
+        />
+        <img
+          src={
+            card.center
+              ? "/icons/ellipse-center.svg"
+              : "/icons/ellipse-side.svg"
+          }
+          alt="ellipse"
+          className={clsx(
+            "absolute opacity-30 left-1/2 -translate-x-1/2 w-full",
+            card.center ? "bottom-0" : "top-0",
+          )}
+        />
+      </div>
+
       {card.center ? (
         <div className="flex h-full flex-col justify-between overflow-visible 2xl:h-[628px]">
           <div className="flex items-start justify-center rounded-xl">
@@ -52,7 +92,7 @@ export default function FeatureCard({ card }: FeatureCardProps) {
             </p>
           </div>
 
-          <div className="flex items-end justify-center overflow-hidden rounded-xl">
+          <div className="flex items-end justify-center rounded-xl relative z-10">
             <img
               src={card.image}
               alt={card.alt}

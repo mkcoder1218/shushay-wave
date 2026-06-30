@@ -10,10 +10,7 @@ const aboutParagraphs = [
 
 export default function About() {
   return (
-    <Section
-      id="about"
-      className="bg-bg-section py-16 md:py-16 lg:py-20 xl:py-24"
-    >
+    <Section id="about" className="bg-bg-section py-16 2xl:pt-10">
       <div className="grid items-center gap-0 md:grid-cols-2 lg:gap-12 xl:gap-16">
         <div className="order-2 flex justify-center md:order-1 md:justify-start">
           <img

@@ -14,15 +14,16 @@ export default function DownloadApp() {
       {/* Phone image — desktop only*/}
       <div
         className={clsx(
-          "hidden lg:flex absolute -top-1 lg:right-20 lg:top-3.5",
-          "xl:right-25 xl:top-6 2xl:-top-1 2xl:right-120 z-10",
-          "items-end justify-end pointer-events-none",
+          "z-10 hidden md:flex items-end justify-end pointer-events-none ",
+          "absolute -top-1 md:top-3.5 md:right-25 lg:right-20 lg:top-3.5",
+          "xl:right-25 xl:top-6 2xl:-top-1.5 2xl:right-75",
+          "min-[120rem]:-top-1 min-[120rem]:right-120",
         )}
       >
         <img
           src="/imgs/phone-on-hand.png"
           alt="Hand holding phone with QR code"
-          className="h-48 lg:h-75 lg:h-100 xl:h-100 2xl:h-115 w-auto object-contain "
+          className="h-85 lg:h-100 xl:h-100 2xl:h-115 w-auto object-contain "
         />
       </div>
 
@@ -63,7 +64,7 @@ export default function DownloadApp() {
             </div>
 
             {/* Phone image — mobile only, inline below text */}
-            <div className="md:-mb-3 lg:hidden flex justify-center w-full pb-0">
+            <div className="md:hidden flex justify-center w-full pb-0">
               <img
                 src="/imgs/phone-on-hand.png"
                 alt="Hand holding phone with QR code"

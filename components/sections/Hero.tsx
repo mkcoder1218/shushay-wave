@@ -13,12 +13,13 @@ export default function Hero() {
         className={clsx(
           "font-heading mb-4 pt-10 text-3xl font-bold leading-tight text-green-primary",
           "sm:text-4xl md:pt-12 md:text-4xl lg:pt-16 lg:text-5xl xl:pt-20 2xl:text-[64px]",
+          "mx-auto max-w-[420px] lg:max-w-[820px] xl:max-w-none",
         )}
       >
         Transforming Equb For The Digital Age
       </h1>
 
-      <p className="mx-auto mb-8 max-w-2xl text-base 2xl:text-[18px] font-medium text-text-body font-heading">
+      <p className="mx-auto mb-8 max-w-[362px] md:max-w-[608px] text-base 2xl:text-[18px] font-medium text-text-body font-heading">
         Save Together, Access Funds Easily, And Manage Your Equb Anytime,
         Anywhere With Wave.
       </p>

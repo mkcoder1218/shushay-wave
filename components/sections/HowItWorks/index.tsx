@@ -15,7 +15,7 @@ export default function HowItWorks() {
         style={{ backgroundImage: "url('/imgs/map.png')" }}
       />
 
-      <Container className="relative py-16 md:py-16 lg:py-20 xl:py-24">
+      <Container className="relative py-16 md:py-16 lg:py-20 xl:py-24 md:pl-0!">
         <div className="grid md:grid-cols-2 gap-8 md:gap-10 lg:gap-12 xl:gap-16 items-center">
           {/* Phone mockup — below steps on mobile, left column on desktop */}
           <div className="flex items-center justify-center">

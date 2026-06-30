@@ -35,7 +35,12 @@ export default function WhyChooseUs() {
               >
                 You Only Need One App
               </p>
-              <h3 className="text-white text-[32px] lg:text-[48px] 2xl:text-[68px] font-bold">
+              <h3
+                className={clsx(
+                  "text-white text-[32px] lg:text-[48px] 2xl:text-[68px] font-bold",
+                  "mx-auto max-w-[376px] md:max-w-[725px]",
+                )}
+              >
                 Save smarter with a trusted digital Equb.
               </h3>
             </div>
@@ -62,7 +67,12 @@ export default function WhyChooseUs() {
               <p className="text-green-accent text-base 2xl:text-[28px] uppercase  mb-3">
                 Simple Control
               </p>
-              <h3 className="text-white text-[32px] lg:text-[48px] 2xl:text-[68px] xl:px-5 font-bold">
+              <h3
+                className={clsx(
+                  "text-white text-[32px] lg:text-[48px] 2xl:text-[68px] xl:px-5 font-bold",
+                  "mx-auto max-w-[376px] md:max-w-[725px]",
+                )}
+              >
                 Easily manage your Equb with reliability.
               </h3>
             </div>
